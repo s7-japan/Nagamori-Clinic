@@ -4,7 +4,7 @@ import { BiSolidLeftArrow, BiSolidRightArrow } from "react-icons/bi";
 import { scheduleData } from "../../../public/data/data";
 
 const CalenderSchendule = () => {
-  const [currentDate, setCurrentDate] = useState(new Date(2025, 0)); // January 2025
+  const [currentDate, setCurrentDate] = useState(new Date()); // January 2025
 
   // Lookup for Japanese clinic names
   const clinicNameMap = {
@@ -185,7 +185,7 @@ const CalenderSchendule = () => {
                         {cell.slots.length === 1 &&
                           cell.slots[0].period === "half" && (
                             <div
-                              className="h-7 sm:h-7"
+                              className="h-[40%]"
                               style={{ backgroundColor: cell.slots[0].colour }}
                             ></div>
                           )}
