@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="323" height="76" viewBox="0 0 323 76">
+  <g id="Group_13" data-name="Group 13" transform="translate(-315 -1902)" opacity="0.96">
+    <g id="Path_10" data-name="Path 10" transform="translate(315 1902)" fill="none">
+      <path d="M0,0H308.6L323,13.656V76H0Z" stroke="none"/>
+      <path d="M 3 3 L 3 73 L 320 73 L 320 14.94559097290039 L 307.4051513671875 3 L 3 3 M 0 0 L 308.6015319824219 0 L 323 13.65622711181641 L 323 76 L 0 76 L 0 0 Z" stroke="none" fill="rgba(48,48,48,0.52)"/>
+    </g>
+    <text id="詳細はこちら_" data-name="詳細はこちら→" transform="translate(379 1951)" fill="#171717" font-size="25" font-family="YuGothicUI-Regular, Yu Gothic UI" letter-spacing="0.134em"><tspan x="0" y="0">詳細はこちら</tspan><tspan y="0" font-family="SegoeUI, Segoe UI">→</tspan></text>
+  </g>
+</svg>

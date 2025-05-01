@@ -1,0 +1,67 @@
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moving {
+  white-space: nowrap;
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.move {
+  display: inline-block;
+  min-width: calc(200% + 40px); /* Ensure the container is wide enough */
+  will-change: transform; /* Optimize for animation */
+}
+
+.move.animate {
+  animation: move 20s linear infinite; /* Animation applied when 'animate' class is added */
+}
+
+.move img {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.left {
+  height: 100%;
+  background: linear-gradient(to right, white, transparent);
+  width: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.right {
+  height: 100%;
+  background: linear-gradient(to left, white, transparent);
+  width: 150px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .move.animate {
+    animation: move 7s linear infinite; /* Faster animation for mobile */
+  }
+  .left,
+  .right {
+    width: 50px; /* Decrease shadow effect on mobile */
+  }
+}

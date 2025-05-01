@@ -1,0 +1,133 @@
+/* CalendarSchedule.css */
+.calendar-container {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  margin: 0 0 10px 0;
+}
+
+.header h3 {
+  margin: 0 0 10px 0;
+  color: #666;
+}
+
+.header p {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.nav-button {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.calendar th {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.calendar td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.sunday {
+  color: red;
+}
+.saturday {
+  color: blue;
+}
+
+.calendar-day {
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+.holiday {
+  background-color: #ffe6f0;
+}
+.project-a {
+  background-color: #b3e6ff;
+}
+.client-b {
+  background-color: #ffb3b3;
+}
+.ha-meeting {
+  background-color: #ffd9b3;
+}
+.shibuya-clinic {
+  background-color: #d9b3ff;
+}
+.gacyoyo-clinic {
+  background-color: #b3ffb3;
+}
+.empty {
+  background-color: white;
+}
+
+.legend {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.legend div {
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.legend-color.ha-meeting {
+  background-color: #ffd9b3;
+}
+.legend-color.project-a {
+  background-color: #b3e6ff;
+}
+.legend-color.client-b {
+  background-color: #ffb3b3;
+}
+.legend-color.shibuya-clinic {
+  background-color: #d9b3ff;
+}
+.legend-color.gacyoyo-clinic {
+  background-color: #b3ffb3;
+}
+.legend-color.holiday {
+  background-color: #ffe6f0;
+}
