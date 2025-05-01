@@ -1,6 +1,5 @@
 "use client";
 import React, { useRef } from "react";
-import logo from "../../../public/images/newLogo.svg";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -35,7 +34,7 @@ const AnimatedLoaderMobile = () => {
       ref={containerRef}
       className="w-screen h-screen fixed z-50 bg-white flex items-center justify-center"
     >
-      <img src={logo} alt="logo" height={300} width={300} />
+      <img src="/images/newLogo.svg" alt="logo" height={300} width={300} />
       <div ref={lineRef} className="h-[3px] bg-black absolute left-0"></div>
     </div>
   );

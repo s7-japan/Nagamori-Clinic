@@ -1,5 +1,5 @@
 import React from "react";
-import btn5 from "../assets/btn5.svg";
+
 
 const Contact1 = ({ formData, setFormData, onSubmit }) => {
   const handleInputChange = (e) => {
@@ -289,7 +289,7 @@ const Contact1 = ({ formData, setFormData, onSubmit }) => {
 
         <div className="w-full flex justify-center mt-20">
           <button type="submit">
-            <img src={btn5} alt="" />
+            <img src="/images/btn5.svg" alt="" />
           </button>
         </div>
       </form>

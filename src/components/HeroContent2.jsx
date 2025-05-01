@@ -17,7 +17,7 @@ const HeroContent2 = () => {
           </div>
           <div className="md:w-[18vw] md:h-[18vw] w-full h-[380px]">
             <video
-              src="vieos/vid2.mov"
+              src="videos/vid2.mov"
               autoPlay
               loop
               muted
@@ -32,7 +32,7 @@ const HeroContent2 = () => {
       <div className="w-full pl-0 md:w-[70%] md:pl-[5vw] flex flex-col justify-center relative">
         <div className="absolute right-20 md:left-[3.5vw] -top-[10vw] md:-top-[2.5vw]">
           <img
-            src={technique}
+            src="/images/technique.png"
             alt=""
             className="h-[40vw] md:h-[10vw] opacity-50 md:opacity-100"
           />

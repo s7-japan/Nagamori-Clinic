@@ -1,7 +1,4 @@
-import React from "react";
-import newhero from "../../../public/images/new_hero.svg";
-import smLogo from "../../../public/images/sm_logo.png";
-import whitelogo from "../../../public/images/whitelogo.svg";
+
 import CalendarSchedule from "../../components/Calender/CalenderSchendule";
 
 const Schedule = () => {
@@ -22,17 +19,17 @@ const Schedule = () => {
       </div>
       <div className="w-full relative h-[55vw] md:h-[25vw] bg-[#EFEFEF] flex ">
         <img
-          src={newhero}
+          src="/images/new_hero.svg"
           alt=""
           className="w-full object-cover object-right md:object-center"
         />
         <img
-          src={smLogo}
+          src="/images/sm_logo.png"
           className=" absolute md:hidden bottom-1 right-2"
           alt=""
         />
         <img
-          src={whitelogo}
+          src="/images/whitelogo.svg"
           className=" absolute hidden md:block bottom-2 right-3"
           alt=""
         />

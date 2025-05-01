@@ -31,97 +31,97 @@ const ImageSlider = () => {
         <div className="left"></div>
         <div className={`move ${animate ? "animate" : ""}`}>
           <img
-            src={sliderone}
+            src="/images/slider1.png"
             alt=""
             className="h-25 md:h-[9vw]"
             loading="lazy"
           />
           <img
-            src={slidertwo}
+            src="/images/slider2.png"
             alt=""
             className="h-25 md:h-[9vw]"
             loading="lazy"
           />
           <img
-            src={sliderthree}
+            src="/images/slider3.png"
             alt=""
             className="h-25 md:h-[9vw]"
             loading="lazy"
           />
           <img
-            src={sliderfour}
+            src="/images/slider4.png"
             alt=""
             className="h-25 md:h-[9vw]"
             loading="lazy"
           />
           <img
-            src={sliderone}
+            src="/images/slider1.png"
             alt=""
             className="h-25 md:h-[9vw]"
             loading="lazy"
           />
           <img
-            src={slidertwo}
+            src="/images/slider2.png"
             alt=""
             className="h-25 md:h-[9vw]"
             loading="lazy"
           />
           <img
-            src={sliderthree}
+            src="/images/slider3.png"
             alt=""
             className="h-25 md:h-[9vw]"
             loading="lazy"
           />
           <img
-            src={sliderfour}
+            src="/images/slider4.png"
             alt=""
             className="h-25 md:h-[9vw]"
             loading="lazy"
           />
           <img
-            src={sliderone}
+            src="/images/slider1.png"
             alt=""
             className="h-25 md:h-[9vw]"
             loading="lazy"
           />
           <img
-            src={slidertwo}
+            src="/images/slider2.png"
             alt=""
             className="h-25 md:h-[9vw]"
             loading="lazy"
           />
           <img
-            src={sliderthree}
+            src="/images/slider3.png"
             alt=""
             className="h-25 md:h-[9vw]"
             loading="lazy"
           />
           <img
-            src={sliderfour}
+            src="/images/slider4.png"
             alt=""
             className="h-25 md:h-[9vw]"
             loading="lazy"
           />
           <img
-            src={sliderone}
+            src="/images/slider1.png"
             alt=""
             className="h-25 md:h-[9vw]"
             loading="lazy"
           />
           <img
-            src={slidertwo}
+            src="/images/slider2.png"
             alt=""
             className="h-25 md:h-[9vw]"
             loading="lazy"
           />
           <img
-            src={sliderthree}
+            src="/images/slider3.png"
             alt=""
             className="h-25 md:h-[9vw]"
             loading="lazy"
           />
           <img
-            src={sliderfour}
+            src="/images/slider4.png"
             alt=""
             className="h-25 md:h-[9vw]"
             loading="lazy"

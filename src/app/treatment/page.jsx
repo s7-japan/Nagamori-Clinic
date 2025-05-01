@@ -1,7 +1,5 @@
 import React from "react";
-import hero from "../assets/hero_removed.png";
-import herowhite from "../assets/herowhite.svg";
-import TreatmentCard from "../components/TreatmentCard";
+import TreatmentCard from "../../components/TreatmentCard";
 
 const Treatment = () => {
   return (
@@ -21,10 +19,10 @@ const Treatment = () => {
       </div>
       <div className="w-full h-[55vw] md:h-[25vw] bg-[#E6E6E6] flex md:px-[13vw] px-6">
         <div className="w-1/2 h-full">
-          <img src={hero} alt="" className="h-full w-full object-cover" />
+          <img src="/images/hero_removed.png" alt="" className="h-full w-full object-cover" />
         </div>
         <div className="w-1/2 h-full md:items-center flex items-start">
-          <img src={herowhite} alt="" className="h-25" />
+          <img src="/images/herowhite.svg" alt="" className="h-25" />
         </div>
       </div>
       <div className="px-6 leading-[36px] md:px-[13vw] mt-8 mb-20 font-light">

@@ -1,11 +1,5 @@
-import React from "react";
-import one from "../../public/images/menu1.png";
-import two from "../../public/images/menu2.png";
-import three from "../../public/images/menu3.png";
-import four from "../../public/images/menu4.png";
-import btn2 from "../../public/images/btn2.svg";
-import btn3 from "../../public/images/btn3.svg";
-import { Link } from "react-router-dom";
+"use client";
+import Link from "next/link";
 
 const Menu = () => {
   return (
@@ -21,7 +15,7 @@ const Menu = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-x-3 gap-y-8 md:gap-8">
         <div>
           <div className="mb-1">
-            <img src={one} alt="" />
+            <img src="/images/menu1.png" alt="" />
           </div>
           <p className="text-[3vw] md:text-[1vw] md:mt-[1vw] font-[400]">
             眉アートメイク
@@ -32,7 +26,7 @@ const Menu = () => {
         </div>
         <div>
           <div className="mb-1">
-            <img src={two} alt="" />
+            <img src="/images/menu2.png" alt="" />
           </div>
           <p className="text-[3vw] md:text-[1vw] md:mt-[1vw] font-[400]">
             アイラインアートメイク
@@ -43,7 +37,7 @@ const Menu = () => {
         </div>
         <div>
           <div className="mb-1">
-            <img src={three} alt="" />
+            <img src="/images/menu3.png" alt="" />
           </div>
           <p className="text-[3vw] md:text-[1vw] md:mt-[1vw] font-[400]">
             リップアートメイク
@@ -54,7 +48,7 @@ const Menu = () => {
         </div>
         <div className="z-10">
           <div className="mb-1">
-            <img src={four} alt="" />
+            <img src="/images/menu4.png" alt="" />
           </div>
           <p className="text-[3vw] md:text-[1vw] md:mt-[1vw] font-[400]">
             ヘアライン, 涙袋 etc
@@ -68,14 +62,14 @@ const Menu = () => {
         onClick={() => {
           window.location.replace("/treatment");
         }}
-        src={btn2}
+        src="/images/btn2.svg"
         alt=""
         className="mt-[3vw] hidden md:block md:w-[15vw] cursor-pointer"
       />
-      <Link to="https://nagamori.vercel.app/treatment">
+      <Link href="https://nagamori.vercel.app/treatment">
         <button>
           <img
-            src={btn3}
+            src="/images/btn3.svg"
             alt=""
             className="mt-[10vw] w-full md:hidden cursor-pointer"
           />

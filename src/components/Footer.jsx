@@ -1,19 +1,18 @@
 import React from "react";
-import logo from "../assets/newLogo.svg";
-import instalogo from "../assets/instalogo.png";
+
 
 const Footer = () => {
   return (
     <div className="w-full bg-[#FCFCFC] px-12 md:px-[14vw] pt-[5vw] mt-20 md:mt-10 flex flex-col items-center">
       <div className="flex flex-col mt-20 md:flex-row items-center md:gap-4 justify-between md:justify-start">
-        <img src={logo} alt="" className="h-14 md:h-[6vw]" />
+        <img src="/images/newLogo.svg" alt="" className="h-14 md:h-[6vw]" />
         <img
           onClick={() => {
             window.location.replace(
               "https://www.instagram.com/tomomi_nagamori_art?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             );
           }}
-          src={instalogo}
+          src="/images/instalogo.png"
           alt=""
           className="w-9.5 md:w-12 lg:w-16 xl:w-20 aspect-square mt-[70px] md:mt-0 cursor-pointer"
         />

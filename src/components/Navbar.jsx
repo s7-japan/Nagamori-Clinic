@@ -1,19 +1,15 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate, useLocation, Router } from "react-router-dom";
-import logo from "../assets/newLogo.svg";
-import { CiMenuBurger } from "react-icons/ci";
 import { RxCross1 } from "react-icons/rx";
-import line from "../assets/line.svg";
-import Nlogo from "../assets/Nlogo.svg";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Navbar({ sidebar, setSidebar }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState("home");
-  const navigate = useNavigate();
-  const location = useLocation();
+  const router = useRouter();
 
   useEffect(() => {
-    const path = location.pathname;
+    const path = router.pathname || "/";
     if (path === "/") {
       setActiveMenu("home");
     } else if (path === "/treatment") {
@@ -23,7 +19,7 @@ export default function Navbar({ sidebar, setSidebar }) {
     } else if (path === "/contact") {
       setActiveMenu("contact");
     }
-  }, [location.pathname]);
+  }, [router.pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +38,7 @@ export default function Navbar({ sidebar, setSidebar }) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [location.pathname]);
+  }, [router.pathname]);
 
   return (
     <div
@@ -53,17 +49,17 @@ export default function Navbar({ sidebar, setSidebar }) {
       <div>
         <img
           onClick={() => {
-            navigate("/");
+            router.push("/");
           }}
-          src={logo}
+          src="/images/newLogo.svg"
           alt="logo"
           className="cursor-pointer h-[4.1vw] hidden md:block"
         />
         <img
           onClick={() => {
-            navigate("/");
+            router.push("/");
           }}
-          src={Nlogo}
+          src="/images/Nlogo.svg"
           alt="logo"
           className="cursor-pointer h-[10vw] md:hidden"
         />
@@ -76,7 +72,11 @@ export default function Navbar({ sidebar, setSidebar }) {
             }}
             className="bg-[#06C755] cursor-pointer h-[3vw] w-[12vw] rounded-b-md mr-20 flex items-center justify-center"
           >
-            <img src={line} alt="" className="h-[90%] object-contain" />
+            <img
+              src="/images/line.svg"
+              alt=""
+              className="h-[90%] object-contain"
+            />
           </div>
           <div className="gap-[8vw] pr-20 hidden lg:flex">
             <Link
@@ -84,7 +84,7 @@ export default function Navbar({ sidebar, setSidebar }) {
                 setActiveMenu("home");
               }}
               className={` text-[0.95vw] relative`}
-              to={"/"}
+              href={"/"}
             >
               ホーム
               <div
@@ -98,7 +98,7 @@ export default function Navbar({ sidebar, setSidebar }) {
                 setActiveMenu("treatment");
               }}
               className={` text-[0.95vw] relative`}
-              to={"/treatment"}
+              href={"/treatment"}
             >
               施術メニュー
               <div
@@ -112,7 +112,7 @@ export default function Navbar({ sidebar, setSidebar }) {
                 setActiveMenu("schedule");
               }}
               className={`relative text-[0.95vw]`}
-              to={"/schedule"}
+              href={"/schedule"}
             >
               出勤予定表
               <div
@@ -126,7 +126,7 @@ export default function Navbar({ sidebar, setSidebar }) {
                 setActiveMenu("contact");
               }}
               className={`relative text-[0.95vw]`}
-              to={"/contact"}
+              href={"/contact"}
             >
               お問い合わせ
               <div

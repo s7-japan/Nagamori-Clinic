@@ -1,7 +1,8 @@
+"use client";
 import React, { useState } from "react";
-import Contact1 from "../components/Contact1";
-import Contact2 from "../components/Contact2";
-import Contact3 from "../components/Contact3";
+import Contact1 from "../../components/Contact1";
+import Contact2 from "../../components/Contact2";
+import Contact3 from "../../components/Contact3";
 
 const Contact = () => {
   const [formData, setFormData] = useState({

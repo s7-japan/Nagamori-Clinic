@@ -10,7 +10,7 @@ const HeroContent = () => {
       <div className="w-full md:w-1/2 flex flex-col relative">
         <div className="">
           <img
-            src={concept}
+            src="/images/concept.png"
             alt=""
             className="md:h-[9.5vw] md:-top-[1.8vw] md:-left-[1vw] absolute -top-[0vw] left-[15vw] h-[40vw] opacity-50 md:opacity-100"
           />
@@ -29,10 +29,10 @@ const HeroContent = () => {
         </p>
       </div>
       <div className="w-full md:w-1/2 flex justify-end">
-        <img src={intersection} alt="" className="w-full md:w-[80%]" />
+        <img src="/images/Intersection.png" alt="" className="w-full md:w-[80%]" />
       </div>
       <div className="flex justify-center mt-10 md:hidden">
-        <img src={btn1} alt="" className="w-full" />
+        <img src="/images/btn1.svg" alt="" className="w-full" />
       </div>
     </div>
   );

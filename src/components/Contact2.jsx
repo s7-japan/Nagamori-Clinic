@@ -1,5 +1,4 @@
 import React from "react";
-import btn5 from "../assets/btn5.svg";
 import emailjs from "emailjs-com";
 
 const Contact2 = ({ formData, setFinalConfirmation }) => {
@@ -205,7 +204,7 @@ const Contact2 = ({ formData, setFinalConfirmation }) => {
         </div>
 
         <div className="w-full flex justify-center mt-20">
-          <img onClick={sendEmail} src={btn5} alt="" />
+          <img onClick={sendEmail} src="/images/btn5.svg" alt="" />
         </div>
       </div>
     </div>

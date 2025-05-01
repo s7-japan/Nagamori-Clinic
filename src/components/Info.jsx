@@ -1,9 +1,6 @@
-import React from "react";
-import intersection from "../../public/images/Intersection.png";
-import instagram from "../../public/images/instalogo.png";
-import btn4 from "../../public/images/btn4.svg";
-import btn5 from "../../public/images//btn5.svg";
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 
 const Info = () => {
   return (
@@ -23,7 +20,7 @@ const Info = () => {
                   "https://www.instagram.com/tomomi_nagamori_art?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 );
               }}
-              src={instagram}
+              src="/images/instalogo.png"
               alt=""
               className="h-10 cursor-pointer"
             />
@@ -34,7 +31,11 @@ const Info = () => {
         </div>
       </div>
       <div className="w-full md:w-[45%]">
-        <img src={intersection} alt="" className="h-full w-full object-cover" />
+        <img
+          src="/images/Intersection.png"
+          alt=""
+          className="h-full w-full object-cover"
+        />
       </div>
       <div className="w-full md:w-[55%] flex flex-col md:justify-between pl-0 md:pl-20">
         <div className="hidden md:block">
@@ -53,7 +54,7 @@ const Info = () => {
                     "https://www.instagram.com/tomomi_nagamori_art?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                   );
                 }}
-                src={instagram}
+                src="/images/instalogo.png"
                 alt=""
                 className="md:h-[3.5vw] cursor-pointer"
               />
@@ -82,24 +83,23 @@ const Info = () => {
           世界で開催されるアートメイクイベントにスピーカーや審査員として招待される。
         </p>
         <div className="flex justify-center md:justify-start">
-          <Link to="/contact">
+          <Link href="/contact">
             <button>
               <img
-                src={btn4}
+                src="/images/btn4.svg"
                 alt=""
                 className="mt-10 md:mt-0 w-[15vw] hidden md:block cursor-pointer"
               />
             </button>
           </Link>
-          <Link to="/contact"></Link>
+          <Link href="/contact"></Link>
           <button>
             <img
-              src={btn4}
+              src="/images/btn4.svg"
               alt=""
               className="mt-10 md:mt-0 w-full md:hidden cursor-pointer"
             />
           </button>
-          <Link />
         </div>
       </div>
     </div>

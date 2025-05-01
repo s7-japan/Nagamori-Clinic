@@ -1,5 +1,5 @@
 import React from "react";
-import tick from "../assets/tick.png";
+
 
 const Contact3 = () => {
   return (
@@ -50,7 +50,7 @@ const Contact3 = () => {
 
       <div className="w-full md:w-[70%] mx-auto border-t mt-10 border-[#707070a0] md:px-5 flex flex-col items-center">
         <div className="w-20 h-20 flex rounded-full bg-[#00FFB1] items-center justify-center mt-10 mb-10 ">
-          <img src={tick} alt="" className="h-10 w-10" />
+          <img src="/images/tick.png" alt="" className="h-10 w-10" />
         </div>
         <p className="font-light leading-9 text-center">
           フォームに記載した内容は正常に送信されました。
