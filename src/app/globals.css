@@ -3,7 +3,11 @@
 
 @font-face {
   font-family: "Sikita";
-  src: url("/fonts/Sitka.ttc");
+  src: url("/assets/fonts/Sitka.ttc");
+}
+@font-face {
+  font-family: "Segoe";
+  src: url("/assets/fonts/SegoeScript.ttf");
 }
 
 * {
@@ -20,4 +24,90 @@
 
 .sikita {
   font-family: "Sikita";
+}
+.Segoe {
+  font-family: "Segoe";
+}
+
+.large-con {
+  @apply container mx-auto px-6 md:px-0 xl:max-w-7xl;
+}
+.small-con {
+  @apply container mx-auto px-6 md:px-0 xl:max-w-[1100px];
+}
+
+.heading-1 {
+  @apply text-center text-[65px] md:text-[75px] lg:text-[84px] xl:text-[91px];
+}
+
+.h-underline {
+  @apply mb-3 h-[1px] w-27 bg-[#707070] md:w-31 lg:w-36 xl:w-38;
+}
+
+.subheading-1 {
+  @apply mb-14 text-center text-[21px] leading-[30px] tracking-[0.076em] text-black md:mb-12 md:text-[22px] lg:text-[23px] xl:text-[25px];
+}
+
+.s-card-heading {
+  @apply mt-3 text-[13px] md:mt-3.5 md:text-base lg:mt-4 lg:text-[19px] xl:mt-5 xl:text-[22px];
+}
+
+.s-card-subheading {
+  @apply text-xs md:text-base lg:text-xl xl:text-[27px];
+}
+
+.input_item_wraper {
+  @apply mt-10 items-start justify-between gap-5 md:flex xl:gap-6;
+}
+.label_wraper {
+  @apply mb-3 flex items-start gap-4 md:mb-0 md:w-[38%] md:justify-between md:gap-0 lg:w-[30%];
+}
+.label_wraper2 {
+  @apply mb-3 flex items-start gap-4 md:mb-0 md:w-[50%] md:justify-between md:gap-0 xl:w-[30%];
+}
+.label_title {
+  @apply font-medium tracking-[0.0147em] md:text-lg md:tracking-[0.0155em] lg:text-xl lg:tracking-[0.0170em] xl:text-2xl xl:tracking-[0.0197em];
+}
+.label_icon {
+  @apply rounded-xl bg-[#D93636] px-4 py-1 text-[11px] font-semibold tracking-[0.053em] text-white md:text-[14px] xl:text-lg xl:text-[21px];
+}
+.input_box {
+  @apply h-full w-full rounded-lg border border-[#707070] bg-[#EBE9E7] px-3 py-4 outline-0 md:px-4 md:py-4.5 md:text-lg lg:px-5.5 lg:py-5.5 lg:text-xl xl:px-7 xl:py-6.5 xl:text-2xl;
+}
+
+.detail_item {
+  @apply font-light tracking-[0.0197em] md:text-lg lg:text-xl xl:text-2xl;
+}
+
+.border_cut_btn {
+  clip-path: polygon(0 0, 94.5% 0%, 100% 20%, 100% 100%, 0 100%);
+  background-color: rgba(48, 48, 48, 0.52);
+  color: #979797;
+  position: relative;
+  cursor: pointer;
+}
+.border_cut_btn:hover {
+  background-color: rgba(48, 48, 48, 0.7);
+  color: #757575;
+}
+.border_cut_btn::before {
+  content: "";
+  clip-path: polygon(0 0, 94.5% 0%, 100% 20%, 100% 100%, 0 100%);
+  background-color: white;
+  inset: 3px;
+  position: absolute;
+  z-index: -10;
+}
+
+.border_cut_btn_fill {
+  clip-path: polygon(0 0, 94.5% 0%, 100% 20%, 100% 100%, 0 100%);
+  background-color: hsla(0, 0%, 0%, 0.12);
+  color: hsla(0, 0%, 9%, 0.745);
+  position: relative;
+  cursor: pointer;
+}
+
+.border_cut_btn_fill:hover {
+  background-color: hsla(0, 0%, 0%, 0.17);
+  color: hsla(0, 0%, 9%, 1);
 }
