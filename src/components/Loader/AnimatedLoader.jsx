@@ -33,10 +33,10 @@ const AnimatedLoader = () => {
   return (
     <div
       ref={containerRef}
-      className="w-screen h-screen fixed z-50 bg-white flex items-center justify-center"
+      className="fixed top-0 z-50 flex h-screen w-screen items-center justify-center bg-white"
     >
-      <img src="images/newLogo.svg" alt="logo" height={300} width={300} />
-      <div ref={lineRef} className="w-[3px] bg-black absolute top-0"></div>
+      <img src="/assets/newLogo.svg" alt="logo" height={300} width={300} />
+      <div ref={lineRef} className="absolute top-0 w-[3px] bg-black"></div>
     </div>
   );
 };
