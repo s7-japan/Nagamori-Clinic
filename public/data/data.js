@@ -232,59 +232,5 @@ export const scheduleData = [
     "slot2": "アマソラクリニック（渋谷）",
     "slot2Colour": "#7DB6DC",
     "slot2Period": "half"
-  },
-  {
-    "date": "2025-05-27",
-    "slot1": " GRACY TOKYO CLINIC（表参道）",
-    "slot1Colour": "#A8AD70",
-    "slot1Period": "half",
-    "slot2": "",
-    "slot2Colour": "",
-    "slot2Period": ""
-  },
-  {
-    "date": "2025-05-28",
-    "slot1": "HAAB東京 ( 原宿）",
-    "slot1Colour": "#DCB37D",
-    "slot1Period": "half",
-    "slot2": "",
-    "slot2Colour": "",
-    "slot2Period": ""
-  },
-  {
-    "date": "2025-05-29",
-    "slot1": "アマソラクリニック（渋谷）",
-    "slot1Colour": "#7DB6DC",
-    "slot1Period": "half",
-    "slot2": "",
-    "slot2Colour": "",
-    "slot2Period": ""
-  },
-  {
-    "date": "2025-05-30",
-    "slot1": "アマソラクリニック（渋谷）",
-    "slot1Colour": "#7DB6DC",
-    "slot1Period": "half",
-    "slot2": "",
-    "slot2Colour": "",
-    "slot2Period": ""
-  },
-  {
-    "date": "2025-05-31",
-    "slot1": "札幌ル・トロワビューティクリニックVogue（札幌）",
-    "slot1Colour": "#DC7D9E",
-    "slot1Period": "half",
-    "slot2": "",
-    "slot2Colour": "",
-    "slot2Period": ""
-  },
-  {
-    "date": "2025-06-01",
-    "slot1": " GRACY TOKYO CLINIC（表参道）",
-    "slot1Colour": "#A8AD70",
-    "slot1Period": "full",
-    "slot2": "",
-    "slot2Colour": "",
-    "slot2Period": ""
   }
 ];

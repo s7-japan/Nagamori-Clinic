@@ -1,20 +1,40 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BiSolidLeftArrow, BiSolidRightArrow } from "react-icons/bi";
-import { scheduleData } from "../../../public/data/data";
+// import { scheduleData } from "../../../public/data/data";
 
 const CalenderSchendule = () => {
   const [currentDate, setCurrentDate] = useState(new Date()); // January 2025
 
-  // Lookup for Japanese clinic names
-  const clinicNameMap = {
-    HAAB: "HAAB東京 ( 原宿）",
-    Amazora: "アマソラクリニック（渋谷)",
-    Vogue: "札幌ル・トロワビューティクリニックVogue（札幌）",
-    Shibaura: "SHIBAURA B.CLINIC（芝浦）",
-    Gracy: "GRACY TOKYO CLINIC（表参道）",
-    Holiday: "休診日",
+  // fetching the data
+  const [scheduleData, setScheduleData] = useState([]);
+  const fetchScheduleData = async () => {
+    try {
+      const res = await fetch("/api/form");
+      if (!res.ok) {
+        throw new Error("Failed to fetch schedule data");
+      }
+      const data = await res.json();
+      setScheduleData(data);
+      console.log("Fetched Schedule Data:", data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
+
+  useEffect(() => {
+    fetchScheduleData(); // Fetch schedule data on component mount
+  }, []);
+
+  // Lookup for Japanese clinic names
+  // const clinicNameMap = {
+  //   HAAB: "HAAB東京 ( 原宿）",
+  //   Amazora: "アマソラクリニック（渋谷)",
+  //   Vogue: "札幌ル・トロワビューティクリニックVogue（札幌）",
+  //   Shibaura: "SHIBAURA B.CLINIC（芝浦）",
+  //   Gracy: "GRACY TOKYO CLINIC（表参道）",
+  //   Holiday: "休診日",
+  // };
 
   // Helper functions for calendar generation
   const getDaysInMonth = (year, month) =>
@@ -87,7 +107,7 @@ const CalenderSchendule = () => {
     const legendData = Array.from(uniqueSlots.entries()).map(
       ([name, color]) => ({
         color,
-        text: clinicNameMap[name] || name,
+        text: name,
       })
     );
 
