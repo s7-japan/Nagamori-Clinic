@@ -1,5 +1,5 @@
 import React from "react";
-
+import BorderCutBtnFill from "./Button/BorderCutBtnFill";
 
 const Contact1 = ({ formData, setFormData, onSubmit }) => {
   const handleInputChange = (e) => {
@@ -26,7 +26,7 @@ const Contact1 = ({ formData, setFormData, onSubmit }) => {
     ];
 
     const isFormValid = requiredFields.every(
-      (field) => formData[field] && formData[field].trim() !== ""
+      (field) => formData[field] && formData[field].trim() !== "",
     );
 
     if (isFormValid) {
@@ -38,133 +38,121 @@ const Contact1 = ({ formData, setFormData, onSubmit }) => {
 
   return (
     <div>
-      <h1 className="text-center text-[8vw] md:text-[3.3vw] mb-1 sikita">
-        Contact
-      </h1>
-      <div className="w-[152px] h-[1.5px] bg-[#707070] relative left-1/2 -translate-x-1/2 mb-3"></div>
-      <p className="text-center mb-15 text-[4vw] md:text-[1.3vw] font-light">
-        お問合せ
-      </p>
+      <div>
+        <h1 className="sikita text-center text-5xl md:text-[54px] lg:text-[60px] xl:text-[68px]">
+          Contact
+        </h1>
+        <div className="mx-auto my-4 h-[1.5px] w-[152px] bg-[#707070] md:my-4.5 lg:my-5 xl:my-6"></div>
+        <p className="text-center text-2xl lg:text-[25px]">お問合せ</p>
 
-      <div className="w-full flex justify-center mb-15">
-        <div className="flex items-center">
+        <div className="my-12 flex w-full items-center justify-center xl:mt-[94px] xl:mb-[66px]">
           <div className="text-center">
             <div
-              className={`w-15 h-15 md:w-20 md:h-20 bg-[#82CCC4] rounded-full flex items-center justify-center text-white text-[5vw] md:text-[1.6vw]`}
+              className={`flex h-15 w-15 items-center justify-center rounded-full bg-[#82CCC4] text-xl text-white md:h-20 md:w-20 md:text-2xl lg:text-3xl xl:text-[42px]`}
             >
               1
             </div>
             <p className="mt-2 font-light">ご入力</p>
           </div>
-          <div className="w-15 md:w-30 bg-[#D9D9D9] h-1 mb-7"></div>
+          <div className="mb-7 h-1 w-15 bg-[#D9D9D9] md:w-30"></div>
           <div className="text-center">
             <div
-              className={`w-15 h-15 md:w-20 md:h-20 bg-[#D9D9D9] rounded-full flex items-center justify-center text-white text-[5vw] md:text-[1.6vw]`}
+              className={`flex h-15 w-15 items-center justify-center rounded-full bg-[#D9D9D9] text-xl text-white md:h-20 md:w-20 md:text-2xl lg:text-3xl xl:text-[42px]`}
             >
               2
             </div>
             <p className="mt-2 font-light">ご確認</p>
           </div>
-          <div className="w-15 md:w-30 bg-[#D9D9D9] h-1 mb-7"></div>
+          <div className="mb-7 h-1 w-15 bg-[#D9D9D9] md:w-30"></div>
           <div className="text-center">
-            <div className="w-15 h-15 md:w-20 md:h-20 bg-[#D9D9D9] rounded-full flex items-center justify-center text-white text-[5vw] md:text-[1.6vw]">
+            <div
+              className={`flex h-15 w-15 items-center justify-center rounded-full bg-[#D9D9D9] text-xl text-white md:h-20 md:w-20 md:text-2xl lg:text-3xl xl:text-[42px]`}
+            >
               3
             </div>
             <p className="mt-2 font-light">送信</p>
           </div>
         </div>
-      </div>
 
-      <p className="text-left md:text-center leading-9 md:leading-12 font-light">
-        下記の入力フォームに必須事項をご入力の上、
-        <br />
-        「入力内容を確認する」ボタンを押してください。
-        <br />
-        ※WEBでのご予約は受け付けておりません。
-      </p>
+        <p className="text-left leading-9 font-light md:text-center md:text-lg md:leading-12 lg:text-xl lg:font-normal lg:text-[#707070] xl:text-[25px]">
+          下記の入力フォームに必須事項をご入力の上、
+          <br />
+          「入力内容を確認する」ボタンを押してください。
+          <br />
+          ※WEBでのご予約は受け付けておりません。
+        </p>
+      </div>
       <form
         onSubmit={handleSubmit}
-        className="w-full md:w-[70%] mx-auto border-t mt-10 border-[#707070a0] md:px-5"
+        className="mx-auto mt-10 w-full border-t border-[#707070a0] md:w-[70%] md:px-5"
       >
-        <div className="md:flex items-center justify-between mt-10 gap-5">
-          <div className="flex gap-5 md:justify-between md:w-[35%] mb-3 md:mb-0">
-            <p className="font-light text-[5.5vw] md:text-[1.3vw]">
-              ご相談項目
-            </p>
-            <div className="bg-[#D93636] text-white px-4 py-1 rounded-xl font-bold">
-              必須
-            </div>
+        <div className="input_item_wraper">
+          <div className="label_wraper">
+            <p className="label_title">ご相談項目</p>
+            <div className="label_icon">必須</div>
           </div>
-          <div className="md:w-[65%]">
+          <div className="md:w-[62%] lg:w-[70%]">
             <input
               type="text"
               name="consultation"
               value={formData.consultation}
               onChange={handleInputChange}
               placeholder="美肌、二重など"
-              className="bg-[#EBE9E7] w-full h-full border border-[#707070] py-5 px-3 rounded-lg outline-0"
+              className="input_box"
             />
           </div>
         </div>
 
-        <div className="md:flex items-start justify-between mt-10 gap-5">
-          <div className="flex gap-5 md:justify-between md:w-[35%] mb-3 md:mb-0 md:mt-3">
-            <p className="font-light text-[5.5vw] md:text-[1.3vw]">お名前</p>
-            <div className="bg-[#D93636] text-white px-4 py-1 rounded-xl font-bold">
-              必須
-            </div>
+        <div className="input_item_wraper">
+          <div className="label_wraper">
+            <p className="label_title">お名前</p>
+            <div className="label_icon">必須</div>
           </div>
-          <div className="md:w-[65%]">
+          <div className="md:w-[62%] lg:w-[70%]">
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleInputChange}
               placeholder="山田 太郎"
-              className="bg-[#EBE9E7] w-full h-full border border-[#707070] py-5 px-3 rounded-lg outline-0"
+              className="input_box"
             />
-            <p className="mt-2 font-light text-[4.5vw] md:text-lg">
+            <p className="mt-2 text-[4.5vw] font-light md:text-lg">
               フルネームでご記入ください。
             </p>
           </div>
         </div>
 
-        <div className="md:flex items-center justify-between mt-10 gap-5">
-          <div className="flex gap-5 md:justify-between md:w-[35%] mb-3 md:mb-0">
-            <p className="font-light text-[5.5vw] md:text-[1.3vw]">
-              お名前（フリガナ）
-            </p>
-            <div className="bg-[#D93636] text-white px-4 py-1 rounded-xl font-bold">
-              必須
-            </div>
+        <div className="input_item_wraper">
+          <div className="label_wraper">
+            <p className="label_title">お名前（フリガナ）</p>
+            <div className="label_icon">必須</div>
           </div>
-          <div className="md:w-[65%]">
+          <div className="md:w-[62%] lg:w-[70%]">
             <input
               type="text"
               name="nameKana"
               value={formData.nameKana}
               onChange={handleInputChange}
               placeholder="ヤマダ タロウ"
-              className="bg-[#EBE9E7] w-full h-full border border-[#707070] py-5 px-3 rounded-lg outline-0"
+              className="input_box"
             />
           </div>
         </div>
 
-        <div className="md:flex items-start justify-between mt-10 gap-5">
-          <div className="flex gap-5 md:justify-between md:w-[35%] mb-3 md:mb-0 md:mt-3">
-            <p className="font-light text-[5.5vw] md:text-[1.3vw]">Eメール</p>
-            <div className="bg-[#D93636] text-white px-4 py-1 rounded-xl font-bold">
-              必須
-            </div>
+        <div className="input_item_wraper">
+          <div className="label_wraper">
+            <p className="label_title">Eメール</p>
+            <div className="label_icon">必須</div>
           </div>
-          <div className="md:w-[65%]">
+          <div className="md:w-[62%] lg:w-[70%]">
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleInputChange}
               placeholder="example@email.com"
-              className="bg-[#EBE9E7] w-full h-full border border-[#707070] py-5 px-3 rounded-lg outline-0"
+              className="input_box"
             />
             <input
               type="email"
@@ -172,92 +160,85 @@ const Contact1 = ({ formData, setFormData, onSubmit }) => {
               value={formData.emailConfirm}
               onChange={handleInputChange}
               placeholder="example@email.com"
-              className="bg-[#EBE9E7] w-full h-full border border-[#707070] py-5 px-3 rounded-lg outline-0 mt-4 md:mt-7"
+              className="input_box mt-4 md:mt-7"
             />
-            <p className="mt-2 font-light text-[4.5vw] md:text-lg">
+            <p className="mt-2 text-[4.5vw] font-light md:text-lg">
               確認のためもう一度入力してください。
             </p>
           </div>
         </div>
 
-        <div className="md:flex items-start justify-between mt-10 gap-5">
-          <div className="flex gap-5 md:justify-between md:w-[35%] mb-3 md:mb-0 md:mt-3">
-            <p className="font-light text-[5.5vw] md:text-[1.3vw]">
-              お問い合わせ内容
-            </p>
-            <div className="bg-[#D93636] text-white px-4 py-1 rounded-xl font-bold">
-              必須
-            </div>
+        <div className="input_item_wraper">
+          <div className="label_wraper">
+            <p className="label_title">お問い合わせ内容</p>
+            <div className="label_icon">必須</div>
           </div>
-          <div className="md:w-[65%]">
+          <div className="md:w-[62%] lg:w-[70%]">
             <textarea
               name="message"
               value={formData.message}
               onChange={handleInputChange}
-              className="bg-[#EBE9E7] w-full h-60 border border-[#707070] py-5 px-3 rounded-lg outline-0"
+              className="input_box"
+              rows={5}
             />
           </div>
         </div>
 
-        <div className="md:flex items-start justify-between mt-10 gap-5">
-          <div className="flex gap-5 md:justify-between md:w-[35%] mb-3 md:mb-0 md:mt-3">
-            <p className="font-light text-[5.5vw] md:text-[1.3vw]">電話番号</p>
-            <div className="bg-[#D93636] text-white px-4 py-1 rounded-xl font-bold">
-              必須
-            </div>
+        <div className="input_item_wraper">
+          <div className="label_wraper">
+            <p className="label_title">電話番号</p>
+            <div className="label_icon">必須</div>
           </div>
-          <div className="md:w-[65%]">
+          <div className="md:w-[62%] lg:w-[70%]">
             <input
               type="tel"
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              className="bg-[#EBE9E7] w-full h-full border border-[#707070] py-5 px-3 rounded-lg outline-0"
+              className="input_box"
             />
           </div>
         </div>
 
-        <div className="md:flex items-center justify-between mt-10 gap-5">
-          <div className="flex gap-5 md:justify-between md:w-[35%] mb-3 md:mb-0">
-            <p className="font-light text-[5.5vw] md:text-[1.3vw]">ご年齢</p>
-            <div className="bg-[#D93636] text-white px-4 py-1 rounded-xl font-bold">
-              必須
-            </div>
+        <div className="input_item_wraper">
+          <div className="label_wraper">
+            <p className="label_title">ご年齢</p>
+            <div className="label_icon">必須</div>
           </div>
-          <div className="md:w-[65%]">
+          <div className="md:w-[62%] lg:w-[70%]">
             <input
               type="number"
               name="age"
               value={formData.age}
               onChange={handleInputChange}
-              className="bg-[#EBE9E7] w-full h-full border border-[#707070] py-5 px-3 rounded-lg outline-0"
+              className="input_box"
             />
           </div>
         </div>
 
-        <div className="md:flex items-start justify-between mt-10 gap-5">
-          <div className="flex gap-5 md:justify-between md:w-[35%] mb-3 md:mb-0 md:mt-3">
-            <p className="font-light text-[5.5vw] md:text-[1.3vw]">性別</p>
-            <div className="bg-[#D93636] text-white px-4 py-1 rounded-xl font-bold">
-              必須
-            </div>
+        <div className="input_item_wraper">
+          <div className="label_wraper">
+            <p className="label_title">性別</p>
+            <div className="label_icon">必須</div>
           </div>
-          <div className="md:w-[65%] flex gap-10 md:block">
-            <div className="flex gap-3 text-[5vw] md:text-[20px] md:mb-5">
+          <div className="flex gap-10 md:block md:w-[62%] lg:w-[70%]">
+            <div className="flex gap-3 text-[5vw] md:mb-5 md:text-[20px]">
               <input
                 type="radio"
                 name="gender"
                 value="male"
+                className="w-6"
                 checked={formData.gender === "male"}
                 onChange={handleInputChange}
               />
-              男{" "}
+              男
             </div>
             <div className="flex gap-3 text-[5vw] md:text-[20px]">
               <input
                 type="radio"
                 name="gender"
                 value="female"
+                className="w-6"
                 checked={formData.gender === "female"}
                 onChange={handleInputChange}
               />
@@ -266,30 +247,32 @@ const Contact1 = ({ formData, setFormData, onSubmit }) => {
           </div>
         </div>
 
-        <div className="md:flex items-start justify-between mt-10 gap-5">
-          <div className="flex gap-5 md:justify-between md:w-[35%] mb-3 md:mb-0 md:mt-3">
-            <p className="font-light text-[5.5vw] md:text-[1.3vw]">
+        <div className="input_item_wraper">
+          <div className="label_wraper">
+            <p className="label_title">
               何を見て当院をお知り
               <br />
               になりましたか？
             </p>
-            <div className="bg-[#D93636] h-9 text-white px-4 py-1 rounded-xl font-bold">
-              必須
-            </div>
+            <div className="label_icon h-9">必須</div>
           </div>
-          <div className="md:w-[65%]">
+          <div className="md:w-[62%] lg:w-[70%]">
             <textarea
+              rows={2}
               name="referralSource"
               value={formData.referralSource}
               onChange={handleInputChange}
-              className="bg-[#EBE9E7] w-full h-30 border border-[#707070] py-5 px-3 rounded-lg outline-0"
+              className="input_box"
             />
           </div>
         </div>
 
-        <div className="w-full flex justify-center mt-20">
-          <button type="submit">
-            <img src="/images/btn5.svg" alt="" />
+        <div className="mt-20 flex w-full justify-center">
+          <button
+            type="submit"
+            className="w-full hover:cursor-pointer sm:w-fit"
+          >
+            <BorderCutBtnFill text={"送信"} />
           </button>
         </div>
       </form>
