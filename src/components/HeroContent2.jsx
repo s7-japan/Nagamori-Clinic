@@ -1,64 +1,67 @@
 import React from "react";
-import technique from "../../public/images/technique.png";
+import SideShape from "./SideShape";
 
 const HeroContent2 = () => {
   return (
-    <div className="px-6 md:px-[16vw] md:flex-row flex flex-col-reverse md:mt-32 mt-[9vw] relative">
-      <div className="w-full md:w-[30%] mt-8 md:mt-0">
-        <div className="flex flex-col gap-5">
-          <div className="md:w-[18vw] md:h-[18vw] w-full h-[90vw]">
+    <div className="relative md:mt-20 lg:mt-30 xl:mt-44">
+      <SideShape height={"757px"} right={"0"} />
+      <div className="large-con relative flex flex-col-reverse md:flex-row md:items-start md:gap-6 lg:gap-10 xl:gap-22">
+        <div className="mt-14 flex w-full flex-col gap-5 md:mt-0 md:max-w-[340px] lg:max-w-[390px]">
+          <div className="aspect-square w-full overflow-hidden">
             <video
-              src="/videos/vid1.mov"
+              src="/assets/vid1.mov"
               autoPlay
               loop
               muted
-              className="w-full h-full object-cover"
+              playsInline
+              className="h-full w-full object-cover"
             ></video>
           </div>
-          <div className="md:w-[18vw] md:h-[18vw] w-full h-[380px]">
-            <video
-              src="videos/vid2.mov"
-              autoPlay
-              loop
-              muted
-              className="w-full h-full object-cover"
-            ></video>
-          </div>
-        </div>
-        <div></div>
-      </div>
-      <div className="absolute top-0 bg-[#B6BFBC] right-0 h-[95%] w-[28%] opacity-[12%] hidden md:block"></div>
 
-      <div className="w-full pl-0 md:w-[70%] md:pl-[5vw] flex flex-col justify-center relative">
-        <div className="absolute right-20 md:left-[3.5vw] -top-[10vw] md:-top-[2.5vw]">
-          <img
-            src="/images/technique.png"
-            alt=""
-            className="h-[40vw] md:h-[10vw] opacity-50 md:opacity-100"
-          />
+          <div className="aspect-square w-full overflow-hidden">
+            <video
+              src="/assets/vid2.mov"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-full w-full object-cover"
+            ></video>
+          </div>
         </div>
-        <div className="text-[7vw] md:mt-[5vw] md:text-[2vw] mb-2 text-[#707070] font-[400] tracking-[3px]">
-          永森独自の技法で
+
+        <div className="relative flex w-full flex-col justify-center">
+          <div className="relative mt-5 mr-auto ml-auto flex w-[330px] flex-col items-center justify-center py-10 md:-mt-3 md:ml-0 md:pt-0 lg:w-[490px] xl:w-[628px] xl:flex-col xl:items-start xl:py-0">
+            <img
+              src="/assets/technique.png"
+              alt="technique"
+              className="absolute left-1/2 w-56 -translate-x-1/2 opacity-40 xl:relative xl:left-0 xl:w-72 xl:-translate-0 xl:opacity-60"
+            />
+            <p className="self-start text-[28px] tracking-[0.055em] text-[#606060] lg:text-[35px] xl:-mt-5 xl:text-[45px] xl:font-light xl:text-black">
+              永森独自の技法で
+            </p>
+            <p className="self-end text-[28px] tracking-[0.055em] text-[#606060] lg:text-[35px] xl:text-[45px] xl:font-light xl:text-black">
+              リアルな毛並みを再現
+            </p>
+          </div>
+          <p className="leading-[36px] font-light lg:text-lg lg:font-normal xl:mt-14 xl:text-xl">
+            眉のアートメイクは、「肌質」と「仕上がり感」
+            でお客様と丁寧に相談のうえ、手彫りか機械彫りかを決めていきますが、マシンのほうが大胆な毛並みができます。
+            <br />
+            <br />
+            Feather
+            Browは、マシンを使用し、ドットの集合体で線を描くことにより、肌への負担が少なくなる、にじみにくく産毛も再現できる、
+            お客様の肌質を選ばない、より自由なデザインにできる、
+            <br />
+            など利点が多いため，世界中で普及している技法です。
+            <br />
+            <br />
+            日本ではまだ綺麗に描けるアーティストが極めて少ないですが、施術者の技術ですべてが決まります。
+            <br />
+            <br />
+            永森が世界的評価の高い4つの講習を経て、５年の学びと研究を重ねて作り上げた技術で、よりリアルな毛並み感を提供いたします。
+          </p>
         </div>
-        <div className="text-[7vw] md:text-[2vw] flex justify-end text-[#707070] font-[400] tracking-[3px]">
-          リアルな毛並みを再現
-        </div>
-        <p className="text-[3.7vw] md:text-[0.95vw] mt-[8vw] md:mt-[1.5vw] font-[200] md:font-[600] mb-20 md:mb-0 leading-9 md:leading-[1.8vw] md:text-[#707070]">
-          眉のアートメイクは、「肌質」と「仕上がり感」
-          でお客様と丁寧に相談のうえ、手彫りか機械彫りかを決めていきますが、マシンのほうが大胆な毛並みができます。
-          <br />
-          <br />
-          Feather
-          Browは、マシンを使用し、ドットの集合体で線を描くことにより、肌への負担が少なくなる、にじみにくく産毛も再現できる、
-          お客様の肌質を選ばない、より自由なデザインにできる、
-          <br />
-          など利点が多いため，世界中で普及している技法です。
-          <br />
-          日本ではまだ綺麗に描けるアーティストが極めて少ないですが、施術者の技術ですべてが決まります。
-          <br />
-          <br />
-          永森が世界的評価の高い4つの講習を経て、５年の学びと研究を重ねて作り上げた技術で、よりリアルな毛並み感を提供いたします。
-        </p>
       </div>
     </div>
   );

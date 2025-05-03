@@ -1,83 +1,53 @@
 "use client";
 import Link from "next/link";
-
+import SectionHeader from "./SectionHeader";
+import SideShape from "./SideShape";
+import BorderCutBtn from "./Button/BorderCutBtn";
 const Menu = () => {
   return (
-    <div className="px-6 md:px-[16vw] flex flex-col items-center mt-24 md:mt-[9vw] relative">
-      <div className="absolute top-0 bg-[#B6BFBC] right-0 h-[105%] w-[28%] opacity-[12%] hidden md:block"></div>
-      <h1 className="text-center text-[15vw] md:text-[4vw] mb-1 sikita">
-        Menu
-      </h1>
-      <div className="w-27 lg:w-31 h-[1px] bg-[#707070] mb-3"></div>
-      <p className="text-center tracking-[0.076em] mb-14 md:mb-12 text-black text-[clamp(21px,2vw,25px)] leading[30px]">
-        施術メニュー
-      </p>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-x-3 gap-y-8 md:gap-8">
-        <div>
-          <div className="mb-1">
-            <img src="/images/menu1.png" alt="" />
+    <div className="relative md:mt-20 lg:mt-30 xl:mt-44">
+      <SideShape height={"1043px"} right={"0"} />
+      <div className="large-con relative mt-24 flex flex-col items-center">
+        <SectionHeader heading={"Menu"} subheading={"施術メニュー"} />
+        <div className="grid grid-cols-2 gap-x-3 gap-y-8 md:grid-cols-4 md:gap-8">
+          <div>
+            <div className="mb-1">
+              <img src="/assets/menu1.png" alt="menu" />
+            </div>
+            <p className="s-card-heading">眉アートメイク</p>
+            <p className="s-card-subheading">￥ 100,000~</p>
           </div>
-          <p className="text-[3vw] md:text-[1vw] md:mt-[1vw] font-[400]">
-            眉アートメイク
-          </p>
-          <p className="text-[3vw] md:text-[1.1vw] sikita font-[500]">
-            ￥ 100,000~
-          </p>
-        </div>
-        <div>
-          <div className="mb-1">
-            <img src="/images/menu2.png" alt="" />
+          <div>
+            <div className="mb-1">
+              <img src="/assets/menu2.png" alt="menu" />
+            </div>
+            <p className="s-card-heading">アイラインアートメイク</p>
+            <p className="s-card-subheading">￥ 100,000~</p>
           </div>
-          <p className="text-[3vw] md:text-[1vw] md:mt-[1vw] font-[400]">
-            アイラインアートメイク
-          </p>
-          <p className="text-[3vw] md:text-[1.1vw] sikita font-[500]">
-            ￥ 100,000~
-          </p>
-        </div>
-        <div>
-          <div className="mb-1">
-            <img src="/images/menu3.png" alt="" />
+          <div>
+            <div className="mb-1">
+              <img src="/assets/menu3.png" alt="menu" />
+            </div>
+            <p className="s-card-heading">リップアートメイク</p>
+            <p className="s-card-subheading">￥ 100,000~</p>
           </div>
-          <p className="text-[3vw] md:text-[1vw] md:mt-[1vw] font-[400]">
-            リップアートメイク
-          </p>
-          <p className="text-[3vw] md:text-[1.1vw] sikita font-[500]">
-            ￥ 100,000~
-          </p>
-        </div>
-        <div className="z-10">
-          <div className="mb-1">
-            <img src="/images/menu4.png" alt="" />
+          <div>
+            <div className="mb-1">
+              <img src="/assets/menu4.png" alt="menu" />
+            </div>
+            <p className="s-card-heading">ヘアライン, 涙袋 etc</p>
+            <p className="s-card-subheading">￥ 100,000~</p>
           </div>
-          <p className="text-[3vw] md:text-[1vw] md:mt-[1vw] font-[400]">
-            ヘアライン, 涙袋 etc
-          </p>
-          <p className="text-[3vw] md:text-[1.1vw] sikita font-[500]">
-            ￥ 100,000~
-          </p>
         </div>
+        <div className="mt-10 flex w-full justify-center md:mt-13 lg:mt-17 xl:mt-20">
+          <Link href="/treatment" className="w-full sm:w-fit">
+            <BorderCutBtn text={"予約確認はこちら →"} />
+          </Link>
+        </div>
+        <p className="mt-8 text-[13px] tracking-[0.097em] md:mt-9 md:text-base lg:mt-10 lg:text-[22px] xl:mt-12 xl:text-[25px]">
+          初めての方も、お気軽にお問い合わせください。
+        </p>
       </div>
-      <img
-        onClick={() => {
-          window.location.replace("/treatment");
-        }}
-        src="/images/btn2.svg"
-        alt=""
-        className="mt-[3vw] hidden md:block md:w-[15vw] cursor-pointer"
-      />
-      <Link href="https://nagamori.vercel.app/treatment">
-        <button>
-          <img
-            src="/images/btn3.svg"
-            alt=""
-            className="mt-[10vw] w-full md:hidden cursor-pointer"
-          />
-        </button>
-      </Link>
-      <p className="mt-7 md:mt-[3vw] text-[3.3vw] md:text-[1.1vw]">
-        初めての方も、お気軽にお問い合わせください。
-      </p>
     </div>
   );
 };

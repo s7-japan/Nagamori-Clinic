@@ -1,26 +1,26 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "./ImageSlider.css";
-import sliderone from "../../../public/images/slider1.png";
-import slidertwo from "../../../public/images/slider2.png";
-import sliderthree from "../../../public/images/slider3.png";
-import sliderfour from "../../../public/images/slider4.png";
 
 const ImageSlider = () => {
   const [animate, setAnimate] = useState(false);
 
   // Preload images
   useEffect(() => {
-    const images = [sliderone, slidertwo, sliderthree, sliderfour];
+    const images = [
+      "/assets/slider1.png",
+      "/assets/slider2.png",
+      "/assets/slider3.png",
+      "/assets/slider4.png",
+    ];
     images.forEach((image) => {
       const img = new Image();
       img.src = image;
     });
 
-    // Delay animation to ensure images are loaded
     const timer = setTimeout(() => {
       setAnimate(true);
-    }, 100); // 100ms delay
+    }, 100);
 
     return () => clearTimeout(timer);
   }, []);
@@ -30,102 +30,24 @@ const ImageSlider = () => {
       <div className="moving md:mt-0">
         <div className="left"></div>
         <div className={`move ${animate ? "animate" : ""}`}>
-          <img
-            src="/images/slider1.png"
-            alt=""
-            className="h-25 md:h-[9vw]"
-            loading="lazy"
-          />
-          <img
-            src="/images/slider2.png"
-            alt=""
-            className="h-25 md:h-[9vw]"
-            loading="lazy"
-          />
-          <img
-            src="/images/slider3.png"
-            alt=""
-            className="h-25 md:h-[9vw]"
-            loading="lazy"
-          />
-          <img
-            src="/images/slider4.png"
-            alt=""
-            className="h-25 md:h-[9vw]"
-            loading="lazy"
-          />
-          <img
-            src="/images/slider1.png"
-            alt=""
-            className="h-25 md:h-[9vw]"
-            loading="lazy"
-          />
-          <img
-            src="/images/slider2.png"
-            alt=""
-            className="h-25 md:h-[9vw]"
-            loading="lazy"
-          />
-          <img
-            src="/images/slider3.png"
-            alt=""
-            className="h-25 md:h-[9vw]"
-            loading="lazy"
-          />
-          <img
-            src="/images/slider4.png"
-            alt=""
-            className="h-25 md:h-[9vw]"
-            loading="lazy"
-          />
-          <img
-            src="/images/slider1.png"
-            alt=""
-            className="h-25 md:h-[9vw]"
-            loading="lazy"
-          />
-          <img
-            src="/images/slider2.png"
-            alt=""
-            className="h-25 md:h-[9vw]"
-            loading="lazy"
-          />
-          <img
-            src="/images/slider3.png"
-            alt=""
-            className="h-25 md:h-[9vw]"
-            loading="lazy"
-          />
-          <img
-            src="/images/slider4.png"
-            alt=""
-            className="h-25 md:h-[9vw]"
-            loading="lazy"
-          />
-          <img
-            src="/images/slider1.png"
-            alt=""
-            className="h-25 md:h-[9vw]"
-            loading="lazy"
-          />
-          <img
-            src="/images/slider2.png"
-            alt=""
-            className="h-25 md:h-[9vw]"
-            loading="lazy"
-          />
-          <img
-            src="/images/slider3.png"
-            alt=""
-            className="h-25 md:h-[9vw]"
-            loading="lazy"
-          />
-          <img
-            src="/images/slider4.png"
-            alt=""
-            className="h-25 md:h-[9vw]"
-            loading="lazy"
-          />
+          {Array(4)
+            .fill(0)
+            .flatMap(() =>
+              [
+                "/assets/slider1.png",
+                "/assets/slider2.png",
+                "/assets/slider3.png",
+                "/assets/slider4.png",
+              ].map((src, idx) => (
+                <img
+                  key={Math.random() + idx}
+                  src={src}
+                  alt="slider_image"
+                  className="h-25 md:h-[9vw]"
+                  loading="lazy"
+                />
+              ))
+            )}
         </div>
         <div className="right"></div>
       </div>
