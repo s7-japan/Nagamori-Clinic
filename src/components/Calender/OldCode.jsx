@@ -130,32 +130,30 @@ const CalenderSchendule = () => {
   const { weeks, legendData } = generateCalendar();
 
   return (
-    <div className="small-con">
-      <div className="flex flex-col items-center">
-        <h1 className="sikita text-[35px] md:text-[45px] lg:text-[55px] xl:text-[68px]">
+    <div className="w-full px-4 sm:px-8 md:px-80 overflow-x-hidden">
+      {/* Header Section */}
+      <div className="flex flex-col items-center mb-6">
+        <h1 className="text-center text-[8vw] md:text-[3.3vw] mb-2 cambria">
           Working Schedule
         </h1>
-        <div className="mb-4.5 h-[1px] w-27 bg-[#707070] md:w-31 lg:w-36 xl:w-38"></div>
-        <p className="mb-[32px] text-[21px] tracking-[0.076em] md:mb-[34px] md:text-[22px] lg:mb-[38px] lg:text-[23px] xl:mb-[41px] xl:text-[25px]">
+        <div className="w-25 h-[1.5px] bg-[#707070] relative mb-3"></div>
+        <p className="text-center text-[clamp(1.3125rem,2vw,1.5625rem)] tracking-[0.076em]">
           出勤表
         </p>
       </div>
 
       {/* Content Section */}
-
-      <p className="mb-12 text-center text-sm leading-[20px] tracking-[0.076em] md:mb-10 md:text-left md:text-base md:tracking-normal lg:text-lg xl:text-xl">
+      <p className="mb-6 text-sm text-center tracking-[0.076em] leading-[20px]">
         詳しくは、以下の在籍表を確認して公式LINEアカウントから予約から確認してください。
       </p>
+      <p className="text-xs tracking-[0.076em]">横スクロールで確認できます。</p>
 
-      <div className="mb-2 text-xs tracking-[0.076em] md:hidden">
-        横スクロールで確認できます。
-      </div>
       {/* Calendar Section with Scroll */}
-      <div className="mt-2 w-full overflow-x-auto md:mt-4">
-        <div className="">
+      <div className="w-full overflow-x-auto md:mt-4 mt-2">
+        <div className="min-w-[700px]">
           {/* Month Header */}
           <div className="grid grid-cols-1 grid-rows-2">
-            <div className="flex items-center justify-between border-[1px] border-gray-600 bg-[#787A98] px-5 py-1 text-lg font-bold text-white sm:text-xl">
+            <div className="bg-[#787A98] flex justify-between px-5 items-center py-1 text-white font-bold text-lg sm:text-xl border-gray-600 border-[1px]">
               <BiSolidLeftArrow
                 color="#A0A1BF"
                 className="cursor-pointer"
@@ -174,7 +172,7 @@ const CalenderSchendule = () => {
               {["日", "月", "火", "水", "木", "金", "土"].map((day) => (
                 <div
                   key={day}
-                  className="flex h-12 items-center justify-center border-[1px] border-gray-600 text-sm sm:h-14 sm:text-base"
+                  className="border-[1px] border-gray-600 flex items-center justify-center h-12 sm:h-14 text-sm sm:text-base"
                 >
                   {day}
                 </div>
@@ -189,10 +187,10 @@ const CalenderSchendule = () => {
                 {week.map((cell, cellIndex) => (
                   <div
                     key={`${weekIndex}-${cellIndex}`}
-                    className={`border-[1px] overflow-hidden border-gray-600 bg-gray-100 h-16 sm:h-20 md:h-[100px] lg:h-[130px] xl:h-[150px] flex flex-col justify-between relative`}
+                    className="border-[1px] border-gray-600 h-16 sm:h-20 flex flex-col justify-between relative"
                     style={{ backgroundColor: cell.backgroundColor }}
                   >
-                    <div className="pt-2 md:pt-3 lg:pt-4 xl:pt-5 pr-2 md:pr-3 lg:pr-4 xl:pr-5 text-right text-sm sm:text-base">
+                    <div className="text-right text-sm sm:text-base absolute top-1 right-2">
                       {cell.day || ""}
                     </div>
                     {cell.day && cell.slots.length > 0 && (
@@ -207,22 +205,22 @@ const CalenderSchendule = () => {
                         {cell.slots.length === 1 &&
                           cell.slots[0].period === "half" && (
                             <div
-                              className="h-6 sm:h-[40%]"
+                              className="h-[40%]"
                               style={{ backgroundColor: cell.slots[0].colour }}
                             ></div>
                           )}
                         {cell.slots.length === 2 &&
                           cell.slots[0].period === "half" &&
                           cell.slots[1].period === "half" && (
-                            <div className="flex flex-col h-full justify-end">
+                            <div className="flex flex-col h-full">
                               <div
-                                className="h-6 sm:h-[40%]"
+                                className="h-[60%]"
                                 style={{
                                   backgroundColor: cell.slots[0].colour,
                                 }}
                               ></div>
                               <div
-                                className="h-6 sm:h-[40%]"
+                                className="h-[40%]"
                                 style={{
                                   backgroundColor: cell.slots[1].colour,
                                 }}
@@ -240,16 +238,14 @@ const CalenderSchendule = () => {
       </div>
 
       {/* Legend Section */}
-      <div className="mt-9 flex flex-col gap-4 md:mt-[45px] lg:mt-[60px] xl:mt-[84px]">
+      <div className="flex flex-col mt-9 gap-4 px-2">
         {legendData.map((category, index) => (
-          <div key={index} className="flex items-center gap-2 sm:gap-10">
+          <div key={index} className="flex items-center gap-4 sm:gap-10">
             <div
-              className="h-5 w-[45px] flex-shrink-0 md:h-[25px] md:w-[55px] lg:h-[35px] lg:w-[80px] xl:h-[45px] xl:w-[101px]"
+              className="w-12 sm:w-20 h-8 sm:h-10"
               style={{ backgroundColor: category.color }}
             ></div>
-            <div className="text-xs md:text-base lg:text-lg xl:text-xl">
-              {category.text}
-            </div>
+            <div className="text-sm sm:text-base">{category.text}</div>
           </div>
         ))}
       </div>
