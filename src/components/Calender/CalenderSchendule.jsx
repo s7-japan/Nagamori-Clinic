@@ -157,16 +157,14 @@ const CalenderSchendule = () => {
           <div className="grid grid-cols-1 grid-rows-2">
             <div className="flex items-center justify-between border-[1px] border-gray-600 bg-[#787A98] px-5 py-1 text-lg font-bold text-white sm:text-xl">
               <BiSolidLeftArrow
-                color="#A0A1BF"
-                className="cursor-pointer"
+                className="cursor-pointer fill-[#A0A1BF] hover:fill-white/90"
                 onClick={prevMonth}
               />
               <div>{`${currentDate.getFullYear()}.${
                 currentDate.getMonth() + 1
               }`}</div>
               <BiSolidRightArrow
-                color="#A0A1BF"
-                className="cursor-pointer"
+                className="cursor-pointer fill-[#A0A1BF] hover:fill-white/90"
                 onClick={nextMonth}
               />
             </div>
