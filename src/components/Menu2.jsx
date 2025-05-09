@@ -40,7 +40,7 @@ const Menu2 = () => {
               <p className="mt-1 text-xl leading-10 font-medium text-[#606060] md:-mt-4">
                 テールアイライン
               </p>
-              <p className="mt-[30px] leading-9 text-black">
+              <p className="mt-[30px] font-light leading-9 text-black">
                 「きれいなテールライン」をつくります。
                 <br />
                 アートメイクで、美しいテールラインを入れることで、横幅のひろがりをつくり、目を大きく見せることができます。また、お化粧に時間をかける必要もなくなります。
@@ -63,7 +63,7 @@ const Menu2 = () => {
               <p className="mt-1 text-xl leading-10 font-medium text-[#606060] md:-mt-4">
                 シャドウアイライン
               </p>
-              <p className="mt-[30px] leading-9 text-black">
+              <p className="mt-[30px] font-light leading-9 text-black">
                 「シャドウアイラインで、魅力的な目もとにしています。
                 <br />
                 二重の幅や骨格に合わせてシャドウの入れる幅をかえることで、日本人に間に合うシャドウラインを実現しました。
@@ -86,7 +86,7 @@ const Menu2 = () => {
               <p className="mt-1 text-xl leading-10 font-medium text-[#606060] md:-mt-4">
                 リップ
               </p>
-              <p className="mt-[30px] leading-9 text-black">
+              <p className="mt-[30px] font-light leading-9 text-black">
                 「美しい定着」により、口紅を塗ったような仕上がりとなります。薄くなりやすい内側は濃くしっかりと、外側は淡く優しくグラデーションで重ねます。
                 <br />
                 技法のバリエーションには自信があり、いくつかの技法を組み合わせることで、綺麗に発色しつつも、透明感のある仕上がりにします。
@@ -109,7 +109,7 @@ const Menu2 = () => {
               <p className="mt-1 text-xl leading-10 font-medium text-[#606060] md:-mt-4">
                 ヘアライン
               </p>
-              <p className="mt-[30px] leading-9 text-black">
+              <p className="mt-[30px] font-light leading-9 text-black">
                 自然なヘアラインを仕上げます。男性、女性ともにとても人気のメニューです。
                 <br />
                 マシンによるドットの集合体により、細くて繊細な毛並みを描くことで、本物のような自然なヘアラインにします。ひたいを丸く見せたり、おもながに見えることを気にしている方には、お顔のたて幅を和らげたり、また、M字の薄い部分を濃くしたり、ご要望に合わせたデザインが可能です。

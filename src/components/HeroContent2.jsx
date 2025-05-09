@@ -44,7 +44,7 @@ const HeroContent2 = () => {
               リアルな毛並みを再現
             </p>
           </div>
-          <p className="leading-[36px] font-light lg:text-lg lg:font-normal xl:mt-14 xl:text-xl">
+          <p className="leading-[36px] font-light lg:text-lg xl:mt-14 xl:text-xl">
             眉のアートメイクは、「肌質」と「仕上がり感」
             でお客様と丁寧に相談のうえ、手彫りか機械彫りかを決めていきますが、マシンのほうが大胆な毛並みができます。
             <br />
