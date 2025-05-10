@@ -45,7 +45,7 @@ const Menu = () => {
           </Link>
         </div>
         <p className="mt-8 text-[13px] tracking-[0.097em] md:mt-9 md:text-base lg:mt-10 lg:text-[22px] xl:mt-12 xl:text-[25px]">
-          初めての方も、お気軽にお問い合わせください。
+          初めての方も、ご気軽のお問い合わせください。
         </p>
       </div>
     </div>
