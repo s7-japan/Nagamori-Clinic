@@ -25,7 +25,7 @@ export default function OtherCard() {
         </div>
         <div>
           <SmallHeading text="黒子・ホクロ" />
-          <PriceCard2 serial={"1回"} p1={"（税込み）11,000 円"} />
+          <PriceCard2 serial={"1個"} p1={"（税込み）11,000 円"} />
         </div>
       </div>
     </div>
