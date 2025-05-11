@@ -15,7 +15,8 @@ export default function LipCard() {
           lineText={"料金表"}
         />
         <div className="mx-auto mt-2 w-full">
-          <img src="/assets/t3.png" alt="t3_image" />
+          <img src="/assets/t3.png" className="hidden md:block w-full" alt="t3_image" />
+          <img src="/assets/t3-mobile.png" className="md:hidden w-full" alt="t3_image" />
         </div>
 
         <div>

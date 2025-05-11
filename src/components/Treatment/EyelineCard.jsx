@@ -15,7 +15,8 @@ export default function EyelineCard() {
           lineText={"料金表"}
         />
         <div className="mx-auto mt-2 w-full">
-          <img src="/assets/t2.png" alt="t2Image" />
+          <img src="/assets/t2.png" className="hidden md:block w-full"  alt="t2Image" />
+          <img src="/assets/t2-mobile.png" className="md:hidden w-full"  alt="t2Image" />
         </div>
 
         <div>
