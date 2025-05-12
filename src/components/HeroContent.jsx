@@ -38,11 +38,6 @@ const HeroContent = () => {
             className="w-full"
           />
         </div>
-        <div className="mt-10 flex justify-center md:hidden">
-          <Link href={"/contact"} className="w-full sm:w-fit">
-            <BorderCutBtn text={"予約確認はこちら →"} />
-          </Link>
-        </div>
       </div>
     </div>
   );

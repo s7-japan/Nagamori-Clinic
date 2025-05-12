@@ -20,18 +20,6 @@ const Menu2 = () => {
           <div className="flex flex-col">
             <div className="relative">
               <img src="/assets/menu2_1.png" alt="menu" className="w-full" />
-              <a
-                className="absolute right-3 bottom-3 w-10 transition-opacity md:hidden"
-                href="https://line.me/R/ti/p/@321iyeoj"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="/assets/lineLogo.png"
-                  className="w-full"
-                  alt="line_logo"
-                />
-              </a>
             </div>
             <div>
               <h3 className="Segoe mt-9 text-[32px] text-[#C8C8C8] opacity-60">

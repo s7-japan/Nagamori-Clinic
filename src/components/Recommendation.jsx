@@ -9,11 +9,11 @@ const Recommendation = () => {
 
       <div className="large-con relative mt-10 md:mt-16 lg:mt-20 xl:mt-25">
         <div className="flex flex-col items-center">
-          <h1 className="sikita text-center text-[35px] md:text-[50px] lg:text-[60px] xl:text-[70px]">
+          <h1 className="sikita text-center leading-[85px] mb-2 text-[35px] md:text-[50px] lg:text-[60px] xl:text-[70px]">
             Recommendations
           </h1>
           <div className="h-underline"></div>
-          <p className="subheading-1">提携先クリニックからひとこと</p>
+          <p className="subheading-1 mt-4">提携先クリニックからひとこと</p>
         </div>
         <div className="grid-cols-1 gap-y-14 md:grid md:grid-cols-2 md:gap-x-16 md:gap-y-20 md:pb-20 lg:grid-cols-3 lg:gap-y-30 xl:gap-y-35">
           <DoctorCard
@@ -86,11 +86,10 @@ const Recommendation = () => {
                   SHIBAURA B.CLINIC 院長
                 </p>
                 <p className="mt-4 font-light md:text-[17px] lg:text-[19px] xl:text-[21px]">
-                  看護師として長年の臨床経験を積んだ後にアートメイクアーティストに転身。その後真面目に学会発表をされたりヨーロッパのアートメイクコンテストで優勝するなど、安心でかつデザインのセンスも良い方なので自信を持ってお勧めできるアートメイク看護師です。
+                  永森友美氏は、看護師としての経験を基盤に、大手美容外科での豊富な実務経験を通じて美容医療の技術を習得した後、アートメイク分野で目覚ましい成果を上げてきたプロフェッショナルです。
                 </p>
                 <p className="mt-4 font-light md:text-[17px] lg:text-[19px] xl:text-[21px]">
-                  日本初の「Beauty Angel
-                  Master」資格取得者であり、真の美しさを追求し続けています。
+                  日本初の「Beauty Angel Master」資格取得者であり、真の美しさを追求し続けています。
                 </p>
               </div>
             </div>

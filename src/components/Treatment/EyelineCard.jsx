@@ -28,7 +28,7 @@ export default function EyelineCard() {
               p2={"（モニター価格税込み）52,800 円"}
             />
             <PriceCard
-              serial={"1回目"}
+              serial={"2回目"}
               p1={"（税込み）33,000 円"}
               p2={"（モニター価格税込み）26,400 円"}
             />

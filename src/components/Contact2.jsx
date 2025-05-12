@@ -21,21 +21,21 @@ const Contact2 = ({ formData, setFinalConfirmation }) => {
         "service_d4n1nzm",
         "template_qon1f9i",
         emailParams,
-        "F6gcOpd9AYgZmi-dS",
+        "F6gcOpd9AYgZmi-dS"
       )
       .then(
         (response) => {
           console.log(
             "Email sent successfully:",
             response.status,
-            response.text,
+            response.text
           );
           setFinalConfirmation(true);
         },
         (error) => {
           console.error("Failed to send email:", error);
           alert("Failed to send email. Please try again.");
-        },
+        }
       );
   };
 
@@ -85,8 +85,8 @@ const Contact2 = ({ formData, setFinalConfirmation }) => {
           ※WEBでのご予約は受け付けておりません。
         </p>
       </div>
-      <div className="large-con mt-10 border-t border-[#707070a0]">
-        <div className="px-6">
+      <div className="mt-10 border-t border-[#707070a0]">
+        <div className="">
           <div className="input_item_wraper">
             <div className="label_wraper2">
               <p className="label_title">ご相談項目</p>

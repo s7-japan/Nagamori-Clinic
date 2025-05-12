@@ -26,7 +26,7 @@ const Contact1 = ({ formData, setFormData, onSubmit }) => {
     ];
 
     const isFormValid = requiredFields.every(
-      (field) => formData[field] && formData[field].trim() !== "",
+      (field) => formData[field] && formData[field].trim() !== ""
     );
 
     if (isFormValid) {
@@ -249,12 +249,8 @@ const Contact1 = ({ formData, setFormData, onSubmit }) => {
 
         <div className="input_item_wraper">
           <div className="label_wraper">
-            <p className="label_title">
-              何を見て当院をお知り
-              <br />
-              になりましたか？
-            </p>
-            <div className="label_icon h-9">必須</div>
+            <p className="label_title">何を見て当院をお知り になりましたか？</p>
+            <div className="label_icon">必須</div>
           </div>
           <div className="md:w-[62%] lg:w-[70%]">
             <textarea

@@ -12,7 +12,7 @@ const Info = () => {
         </p>
         <div className="mx-w-[522px] flex flex-col">
           <div className="flex items-center justify-between md:gap-16">
-            <h1 className="text-[46px] font-light tracking-[0.02em] md:text-[52px] lg:text-[60px] xl:text-[72px]">
+            <h1 className="text-[46px] tracking-[0.2em] md:text-[52px] lg:text-[60px] xl:text-[72px]">
               永森友美
             </h1>
             <a
@@ -28,7 +28,7 @@ const Info = () => {
               />
             </a>
           </div>
-          <p className="sikita md:2xl lg:text-28px mt-2 mb-5 text-[21px] italic xl:mt-2.5 xl:text-[33px]">
+          <p className="SitkaNew md:2xl lg:text-28px mt-2 mb-5 text-[21px] italic xl:mt-2.5 xl:text-[33px]">
             Nagamori Tomomi
           </p>
         </div>
@@ -92,7 +92,7 @@ const Info = () => {
           世界で開催されるアートメイクイベントにスピーカーや審査員として招待される。
         </p>
         <div className="mt-11 flex w-full cursor-pointer justify-center md:mt-13 md:justify-start lg:mt-14 xl:mt-16">
-          <Link href="/contact" className="w-full sm:w-fit">
+          <Link href="/schedule" className="w-full sm:w-fit">
             <BorderCutBtn text={"予約確認はこちら →"} />
           </Link>
         </div>

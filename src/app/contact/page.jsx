@@ -45,7 +45,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="px-6 pt-30">
+    <div className="large-con pt-30">
       {finalConfirmation ? (
         <Contact3 />
       ) : !showConfirmation ? (

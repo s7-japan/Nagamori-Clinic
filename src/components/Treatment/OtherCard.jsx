@@ -19,9 +19,9 @@ export default function OtherCard() {
         </div>
         <div>
           <SmallHeading text="涙袋アートメイク" />
-          <PriceCard2 serial={"1回"} p1={"（税込み）33,000 円"} />
+          <PriceCard2 serial={"1回目"} p1={"（税込み）33,000 円"} />
           <SmallHeading text="眉・リップ Rmove (専門薬液を用いて過去のアートを薄くする技法）" />
-          <PriceCard2 serial={"1回"} p1={"（税込み）33,000 円"} />
+          <PriceCard2 serial={"1回目"} p1={"（税込み）33,000 円"} />
         </div>
         <div>
           <SmallHeading text="黒子・ホクロ" />

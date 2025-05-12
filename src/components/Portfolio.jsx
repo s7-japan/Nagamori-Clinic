@@ -17,10 +17,10 @@ const Portfolio = () => {
           <img src="/assets/p6.png" alt="portfolio_image" />
           <img src="/assets/p9.png" alt="portfolio_image" />
           <img src="/assets/p8.png" alt="portfolio_image" />
-          <img src="/assets/p4.png" alt="portfolio_image" />
-          <img src="/assets/p12.png" alt="portfolio_image" />
-          <img src="/assets/p10.png" alt="portfolio_image" />
-          <img src="/assets/p3.png" alt="portfolio_image" />
+          <img src="/assets/p4.png" className="hidden md:block" alt="portfolio_image" />
+          <img src="/assets/p12.png" className="hidden md:block" alt="portfolio_image" />
+          <img src="/assets/p10.png" className="hidden md:block" alt="portfolio_image" />
+          <img src="/assets/p3.png" className="hidden md:block" alt="portfolio_image" />
           <img src="/assets/p11.png" alt="portfolio_image" />
           <img src="/assets/p2.png" alt="portfolio_image" />
         </div>
