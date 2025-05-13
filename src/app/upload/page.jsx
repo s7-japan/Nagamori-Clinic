@@ -82,9 +82,11 @@ const Upload = () => {
             slot1: row.Slot1 || "",
             slot1Colour: row.Slot1Colour || "",
             slot1Period: row.Slot1Period || "",
+            slot1Link: row.Slot1Link || "",
             slot2: row.Slot2 || "",
             slot2Colour: row.Slot2Colour || "",
             slot2Period: row.Slot2Period || "",
+            slot2Link: row.Slot2Link || "",
           };
         });
 
@@ -95,6 +97,7 @@ const Upload = () => {
           const validPeriod = (p) =>
             !p || ["half", "full"].includes(p.toLowerCase());
           const hasData = entry.slot1Colour || entry.slot2Colour;
+          // URLs are optional, so we don't validate them strictly
           return (
             isValidDate &&
             validPeriod(entry.slot1Period) &&

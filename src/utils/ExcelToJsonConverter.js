@@ -15,9 +15,11 @@ const scheduleData = rawData.map((row) => ({
   slot1: row.Slot1 || "",
   slot1Colour: row.Slot1Colour || "",
   slot1Period: row.Slot1Period || "",
+  slot1Link: row.Slot1Link || "",
   slot2: row.Slot2 || "",
   slot2Colour: row.Slot2Colour || "",
   slot2Period: row.Slot2Period || "",
+  slot2Link: row.Slot2Link || "",
 }));
 
 // Validate and clean data (optional, add more checks as needed)

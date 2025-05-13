@@ -64,15 +64,19 @@ const CalenderSchendule = () => {
         slot1: "",
         slot1Colour: "",
         slot1Period: "",
+        slot1Link: "",
         slot2: "",
         slot2Colour: "",
         slot2Period: "",
+        slot2Link: "",
       };
       const slots = [];
       if (dayData.slot1Colour) {
         slots.push({
           colour: dayData.slot1Colour,
           period: dayData.slot1Period,
+          text: dayData.slot1,
+          link: dayData.slot1Link,
         });
         if (dayData.slot1) {
           uniqueSlots.set(dayData.slot1, dayData.slot1Colour);
@@ -82,6 +86,8 @@ const CalenderSchendule = () => {
         slots.push({
           colour: dayData.slot2Colour,
           period: dayData.slot2Period,
+          text: dayData.slot2,
+          link: dayData.slot2Link,
         });
         if (dayData.slot2) {
           uniqueSlots.set(dayData.slot2, dayData.slot2Colour);
@@ -105,10 +111,21 @@ const CalenderSchendule = () => {
 
     // Convert uniqueSlots to array for legend
     const legendData = Array.from(uniqueSlots.entries()).map(
-      ([name, color]) => ({
-        color,
-        text: name,
-      })
+      ([name, color]) => {
+        // Find the first entry with this name to get its link
+        const entry = scheduleData.find(
+          (item) => item.slot1 === name || item.slot2 === name
+        );
+        const link = entry 
+          ? (entry.slot1 === name ? entry.slot1Link : entry.slot2Link) 
+          : "";
+        
+        return {
+          color,
+          text: name,
+          link: link || "",
+        };
+      }
     );
 
     return { weeks, legendData };
@@ -198,33 +215,73 @@ const CalenderSchendule = () => {
                         {cell.slots.length === 1 &&
                           cell.slots[0].period === "full" && (
                             <div
-                              className="h-full"
+                              className="h-full relative"
                               style={{ backgroundColor: cell.slots[0].colour }}
-                            ></div>
+                            >
+                              {cell.slots[0].link && (
+                                <a 
+                                  href={cell.slots[0].link} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="absolute inset-0 cursor-pointer"
+                                  title={`Visit ${cell.slots[0].text}`}
+                                />
+                              )}
+                            </div>
                           )}
                         {cell.slots.length === 1 &&
                           cell.slots[0].period === "half" && (
                             <div
-                              className="h-6 sm:h-[40%]"
+                              className="h-6 sm:h-[40%] relative"
                               style={{ backgroundColor: cell.slots[0].colour }}
-                            ></div>
+                            >
+                              {cell.slots[0].link && (
+                                <a 
+                                  href={cell.slots[0].link} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="absolute inset-0 cursor-pointer"
+                                  title={`Visit ${cell.slots[0].text}`}
+                                />
+                              )}
+                            </div>
                           )}
                         {cell.slots.length === 2 &&
                           cell.slots[0].period === "half" &&
                           cell.slots[1].period === "half" && (
                             <div className="flex flex-col h-full justify-end">
                               <div
-                                className="h-6 sm:h-[40%]"
+                                className="h-6 sm:h-[40%] relative"
                                 style={{
                                   backgroundColor: cell.slots[0].colour,
                                 }}
-                              ></div>
+                              >
+                                {cell.slots[0].link && (
+                                  <a 
+                                    href={cell.slots[0].link} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="absolute inset-0 cursor-pointer"
+                                    title={`Visit ${cell.slots[0].text}`}
+                                  />
+                                )}
+                              </div>
                               <div
-                                className="h-6 sm:h-[40%]"
+                                className="h-6 sm:h-[40%] relative"
                                 style={{
                                   backgroundColor: cell.slots[1].colour,
                                 }}
-                              ></div>
+                              >
+                                {cell.slots[1].link && (
+                                  <a 
+                                    href={cell.slots[1].link} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="absolute inset-0 cursor-pointer"
+                                    title={`Visit ${cell.slots[1].text}`}
+                                  />
+                                )}
+                              </div>
                             </div>
                           )}
                       </div>
@@ -246,7 +303,18 @@ const CalenderSchendule = () => {
               style={{ backgroundColor: category.color }}
             ></div>
             <div className="text-xs md:text-base lg:text-lg xl:text-xl">
-              {category.text}
+              {category.link ? (
+                <a 
+                  href={category.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  {category.text}
+                </a>
+              ) : (
+                category.text
+              )}
             </div>
           </div>
         ))}
