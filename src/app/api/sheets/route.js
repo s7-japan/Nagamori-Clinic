@@ -82,54 +82,26 @@ async function fetchAllSheetsData(spreadsheetId) {
         console.log(`Sheet ${sheetTitle} headers: ${headers.join(', ')}`);
         console.log(`Sheet ${sheetTitle} has ${rows.length - 1} data rows`);
         
-        // Map headers to our expected format (case-insensitive matching)
-        const headerMap = {
-          date: headers.findIndex(h => /^date$/i.test(h)),
-          slot1: headers.findIndex(h => /^slot1$/i.test(h)),
-          slot1Link: headers.findIndex(h => /^slot(1?)links$/i.test(h)), // Match SlotLinks or Slot1Links
-          slot1Colour: headers.findIndex(h => /^slot1colou?r$/i.test(h)), // Match both color and colour
-          slot1Period: headers.findIndex(h => /^slot1period$/i.test(h)),
-          slot2: headers.findIndex(h => /^slot2$/i.test(h)),
-          slot2Colour: headers.findIndex(h => /^slot2colou?r$/i.test(h)),
-          slot2Period: headers.findIndex(h => /^slot2period$/i.test(h)),
-          slot2Link: -1 // We'll populate this later if needed
-        };
+        // Find the indexes of the date and slot1 columns (case-insensitive)
+        const dateIndex = headers.findIndex(h => /^date$/i.test(h));
+        const slot1Index = headers.findIndex(h => /^slot1$/i.test(h));
         
-        // Log the header mapping
-        console.log(`Header mapping for sheet ${sheetTitle}:`, 
-          Object.entries(headerMap)
-            .filter(([_, index]) => index !== -1)
-            .map(([key, index]) => `${key}: ${headers[index]}`)
-            .join(', ')
-        );
-        
-        // Check if we have at least the date and a slot column
-        if (headerMap.date === -1 || (headerMap.slot1 === -1 && headerMap.slot2 === -1)) {
-          console.log(`Sheet ${sheetTitle} doesn't have the required Date and Slot columns. Skipping.`);
+        // We need both date and slot1 columns
+        if (dateIndex === -1 || slot1Index === -1) {
+          console.log(`Sheet ${sheetTitle} doesn't have both required Date and Slot1 columns. Skipping.`);
           continue;
         }
         
-        // Map remaining rows to objects using our header mapping
+        console.log(`Found columns in sheet ${sheetTitle}: Date(${dateIndex}), Slot1(${slot1Index})`);
+        
+        // Map remaining rows to objects with just the date and slot1 values
         const sheetData = rows.slice(1).map((row, rowIndex) => {
-          const item = {};
-          
-          // Map each field using our header mapping
-          Object.entries(headerMap).forEach(([key, index]) => {
-            if (index !== -1 && index < row.length) {
-              item[key] = row[index] || '';
-            } else {
-              item[key] = '';
-            }
-          });
-          
-          // Special handling for SlotLinks - if it's a common column for both slots
-          if (headerMap.slot1Link !== -1 && headerMap.slot2Link === -1) {
-            item.slot2Link = item.slot1Link;
-          }
-          
-          // Add source sheet info for debugging
-          item._sourceSheet = sheetTitle;
-          item._rowIndex = rowIndex + 2; // +2 because we're 0-indexed and skipped header
+          const item = {
+            date: dateIndex >= 0 && dateIndex < row.length ? row[dateIndex] || '' : '',
+            slot1: slot1Index >= 0 && slot1Index < row.length ? row[slot1Index] || '' : '',
+            _sourceSheet: sheetTitle,
+            _rowIndex: rowIndex + 2 // +2 because we're 0-indexed and skipped header
+          };
           
           return item;
         });
@@ -168,6 +140,38 @@ function transformToScheduleData(data) {
       return [];
     }
     
+    // Define mappings for Slot1 values to their properties
+    // These are hardcoded values based on the current data.js file
+    const slotMappings = {
+      // Closed day
+      "休診日": {
+        colour: "#FFE3E3",  // Light red
+        period: "full",
+        link: ""
+      },
+      // Clinics with their colors, periods, and links
+      "アマソラクリニック（渋谷）": {
+        colour: "#7DB6DC",  // Light blue
+        period: "half",
+        link: "https://amasora.jp/clinic/"
+      },
+      "HAAB東京 ( 原宿）": {
+        colour: "#DCB37D",  // Light brown
+        period: "half",
+        link: "https://haab.clinic/clinic/tokyo-harajuku/"
+      },
+      "SHIBAURA B.CLINIC（芝浦）": {
+        colour: "#847DDC",  // Light purple
+        period: "half",
+        link: "https://e-onetower.jp/beauty/"
+      },
+      "札幌ル・トロワビューティクリニックVogue（札幌）": {
+        colour: "#DC7D9E",  // Light pink
+        period: "half", 
+        link: "https://slbc-vogue.jp"
+      }
+    };
+    
     // Sort data by date
     const sortedData = [...data].sort((a, b) => {
       // Ensure dates are in the same format (YYYY-MM-DD)
@@ -178,27 +182,32 @@ function transformToScheduleData(data) {
     
     // Map to the required format
     const transformedData = sortedData.map(item => {
-      // Handle missing or empty data
+      // Get the base Slot1 value
       const slot1 = item.slot1 || '';
-      const slot1Colour = item.slot1Colour || '';
-      const slot1Period = item.slot1Period || '';
-      const slot1Link = item.slot1Link || '';
-      const slot2 = item.slot2 || '';
-      const slot2Colour = item.slot2Colour || '';
-      const slot2Period = item.slot2Period || '';
-      const slot2Link = item.slot2Link || '';
       
-      // Create a base object with default empty values
+      // Get mapping for Slot1 (or use defaults)
+      let slot1Mapping = slotMappings[slot1];
+      if (!slot1Mapping && slot1 !== '') {
+        // If we don't have a mapping but have a Slot1 value, use default values
+        console.log(`No mapping for Slot1 value: "${slot1}", using defaults`);
+        slot1Mapping = {
+          colour: "#CCCCCC",  // Default grey
+          period: "half",
+          link: ""
+        };
+      }
+      
+      // Create the item with derived properties
       const transformedItem = {
         date: formatDate(item.date),
         slot1,
-        slot1Colour,
-        slot1Period,
-        slot1Link,
-        slot2,
-        slot2Colour,
-        slot2Period,
-        slot2Link
+        slot1Colour: slot1 ? (slot1Mapping?.colour || "#CCCCCC") : "",
+        slot1Period: slot1 ? (slot1Mapping?.period || "half") : "",
+        slot1Link: slot1 ? (slot1Mapping?.link || "") : "",
+        slot2: "",
+        slot2Colour: "",
+        slot2Period: "",
+        slot2Link: ""
       };
       
       return transformedItem;

@@ -30,7 +30,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://slbc-vogue.jp"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-04",
@@ -41,7 +41,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-05",
@@ -63,7 +63,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-07",
@@ -74,7 +74,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-08",
@@ -85,7 +85,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-09",
@@ -96,7 +96,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-10",
@@ -107,7 +107,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-11",
@@ -140,7 +140,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://haab.clinic/clinic/tokyo-harajuku/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-14",
@@ -151,7 +151,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://haab.clinic/clinic/tokyo-harajuku/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-15",
@@ -162,7 +162,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://e-onetower.jp/beauty/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-16",
@@ -173,7 +173,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://e-onetower.jp/beauty/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-17",
@@ -184,17 +184,17 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://e-onetower.jp/beauty/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-18",
     "slot1": "休診日",
     "slot1Colour": "#FFE3E3",
-    "slot1Period": "half",
+    "slot1Period": "full",
     "slot1Link": "",
-    "slot2": "アマソラクリニック（渋谷）",
-    "slot2Colour": "#7DB6DC",
-    "slot2Period": "half",
+    "slot2": "",
+    "slot2Colour": "",
+    "slot2Period": "",
     "slot2Link": ""
   },
   {
@@ -217,7 +217,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://slbc-vogue.jp"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-21",
@@ -228,7 +228,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-22",
@@ -239,7 +239,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-23",
@@ -250,7 +250,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://e-onetower.jp/beauty/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-24",
@@ -261,7 +261,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://haab.clinic/clinic/tokyo-harajuku/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-25",
@@ -272,29 +272,29 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://haab.clinic/clinic/tokyo-harajuku/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-26",
     "slot1": "休診日",
     "slot1Colour": "#FFE3E3",
-    "slot1Period": "half",
-    "slot1Link": "https://amasora.jp/clinic/",
-    "slot2": "アマソラクリニック（渋谷）",
-    "slot2Colour": "#7DB6DC",
-    "slot2Period": "half",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot1Period": "full",
+    "slot1Link": "",
+    "slot2": "",
+    "slot2Colour": "",
+    "slot2Period": "",
+    "slot2Link": ""
   },
   {
     "date": "2025-05-27",
     "slot1": " GRACY TOKYO CLINIC（表参道）",
-    "slot1Colour": "#A8AD70",
+    "slot1Colour": "#CCCCCC",
     "slot1Period": "half",
-    "slot1Link": "https://gracytokyoclinic.jp/",
+    "slot1Link": "",
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://gracytokyoclinic.jp/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-28",
@@ -305,7 +305,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://haab.clinic/clinic/tokyo-harajuku/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-29",
@@ -316,7 +316,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-30",
@@ -327,7 +327,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-05-31",
@@ -338,7 +338,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://slbc-vogue.jp"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-01",
@@ -371,7 +371,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://slbc-vogue.jp"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-04",
@@ -382,7 +382,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-05",
@@ -404,7 +404,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-07",
@@ -415,7 +415,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-08",
@@ -426,7 +426,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-09",
@@ -437,7 +437,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-10",
@@ -448,7 +448,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-11",
@@ -481,7 +481,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://haab.clinic/clinic/tokyo-harajuku/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-14",
@@ -492,7 +492,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://haab.clinic/clinic/tokyo-harajuku/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-15",
@@ -503,7 +503,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://e-onetower.jp/beauty/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-16",
@@ -514,7 +514,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://e-onetower.jp/beauty/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-17",
@@ -525,13 +525,13 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://e-onetower.jp/beauty/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-18",
     "slot1": "休診日",
     "slot1Colour": "#FFE3E3",
-    "slot1Period": "half",
+    "slot1Period": "full",
     "slot1Link": "",
     "slot2": "",
     "slot2Colour": "",
@@ -558,7 +558,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://slbc-vogue.jp"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-21",
@@ -569,7 +569,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-22",
@@ -580,7 +580,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-23",
@@ -591,7 +591,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://e-onetower.jp/beauty/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-24",
@@ -602,7 +602,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://haab.clinic/clinic/tokyo-harajuku/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-25",
@@ -613,29 +613,29 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://haab.clinic/clinic/tokyo-harajuku/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-26",
     "slot1": "休診日",
     "slot1Colour": "#FFE3E3",
-    "slot1Period": "half",
-    "slot1Link": "https://amasora.jp/clinic/",
+    "slot1Period": "full",
+    "slot1Link": "",
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-27",
     "slot1": " GRACY TOKYO CLINIC（表参道）",
-    "slot1Colour": "#A8AD70",
+    "slot1Colour": "#CCCCCC",
     "slot1Period": "half",
-    "slot1Link": "https://gracytokyoclinic.jp/",
+    "slot1Link": "",
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://gracytokyoclinic.jp/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-28",
@@ -646,7 +646,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://haab.clinic/clinic/tokyo-harajuku/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-29",
@@ -657,7 +657,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-06-30",
@@ -668,7 +668,7 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://amasora.jp/clinic/"
+    "slot2Link": ""
   },
   {
     "date": "2025-07-01",
@@ -679,6 +679,6 @@ export const scheduleData = [
     "slot2": "",
     "slot2Colour": "",
     "slot2Period": "",
-    "slot2Link": "https://slbc-vogue.jp"
+    "slot2Link": ""
   }
 ];
