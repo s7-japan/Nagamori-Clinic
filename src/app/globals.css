@@ -96,6 +96,7 @@ body {
   position: relative;
   cursor: pointer;
 }
+
 .border_cut_btn:hover {
   background-color: rgba(48, 48, 48, 0.7);
   color: #757575;
@@ -119,4 +120,23 @@ body {
 .border_cut_btn_fill:hover {
   background-color: hsla(0, 0%, 0%, 0.17);
   color: hsla(0, 0%, 9%, 1);
+}
+
+.border_cut_btnsm {
+  clip-path: polygon(0 0, 94.5% 0%, 100% 20%, 100% 100%, 0 100%);
+  background-color: rgba(48, 48, 48, 0.52);
+  color: #979797;
+  position: relative;
+  cursor: pointer;
+}
+.border_cut_btnsm:hover {
+  background-color: rgba(48, 48, 48, 0.7);
+  color: #757575;
+}
+.border_cut_btnsm::before {
+  content: "";
+  clip-path: polygon(0 0, 94.5% 0%, 100% 20%, 100% 100%, 0 100%);
+  background-color: white;
+  position: absolute;
+  z-index: -10;
 }

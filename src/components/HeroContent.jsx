@@ -18,7 +18,7 @@ const HeroContent = () => {
               リアルで自然な眉を描く
             </p>
           </div>
-          <p className="leading-[36px] font-light lg:text-lg lg:font-normal xl:mt-14 xl:text-xl">
+          <p className="leading-[36px] font-light lg:text-lg xl:mt-14 xl:text-xl">
             現在の主流としては、使い捨ての医療用ニードルと色素を用いて、皮膚の真皮上層部に染色していく行為です。
             <br />
             <br />
@@ -28,7 +28,8 @@ const HeroContent = () => {
             ただし、日本ではまだまだ手彫りによる毛並み技術が主流ですが、この技術では数年経つと滲んでしまい、塗りつぶしたような仕上がりになる点が懸念されます。
             <br />
             <br />
-            一方で、私たちの施術ではマシンでドットを描く技術を採用しており、滲みにくく肌への負担も少ないのが特徴です。これにより、仕上がりの美しさと長持ちする自然な色味を実現しています。
+            一方で、Nagamori Art
+            Makeでの施術ではマシンでドットを描く技術を採用しており、滲みにくく肌への負担も少ないのが特徴です。これにより、仕上がりの美しさと長持ちする自然な色味を実現しています。
           </p>
         </div>
         <div className="mt-11 flex w-full justify-end md:w-1/2 xl:mt-0">
