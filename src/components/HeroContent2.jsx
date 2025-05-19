@@ -32,7 +32,7 @@ const HeroContent2 = () => {
 
         <div className="relative flex w-full flex-col justify-center">
           <div className="relative mt-5 mr-auto ml-auto flex w-[330px] flex-col items-center justify-center py-10 md:-mt-3 md:ml-0 md:pt-0 lg:w-[490px] xl:w-[628px] xl:flex-col xl:items-start xl:py-0">
-            <p className="text-[41px] font-sans tracking-[0.055em] text-[#606060] lg:text-[50px] xl:mt-20 xl:text-[63px]">
+            <p className="text-[41px] NotoSerifJP tracking-[0.055em] text-[#606060] lg:text-[50px] xl:mt-20 xl:text-[63px]">
               Feather Brow
             </p>
             <p className="text-[17px] tracking-[0.055em] mt-3 xl:mt-4 text-[#606060] lg:text-[23px] xl:text-[28px]">
