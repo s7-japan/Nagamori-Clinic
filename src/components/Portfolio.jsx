@@ -1,7 +1,7 @@
 "use client";
 import SectionHeader from "./SectionHeader";
 import SideShape from "./SideShape";
-import BorderCutBtn from "./Button/BorderCutBtn";
+import BorderCutBtnSm from "./Button/BorderCutBtnSm";
 const Portfolio = () => {
   return (
     <div className="relative">
@@ -17,21 +17,37 @@ const Portfolio = () => {
           <img src="/assets/p6.png" alt="portfolio_image" />
           <img src="/assets/p9.png" alt="portfolio_image" />
           <img src="/assets/p8.png" alt="portfolio_image" />
-          <img src="/assets/p4.png" className="hidden md:block" alt="portfolio_image" />
-          <img src="/assets/p12.png" className="hidden md:block" alt="portfolio_image" />
-          <img src="/assets/p10.png" className="hidden md:block" alt="portfolio_image" />
-          <img src="/assets/p3.png" className="hidden md:block" alt="portfolio_image" />
+          <img
+            src="/assets/p4.png"
+            className="hidden md:block"
+            alt="portfolio_image"
+          />
+          <img
+            src="/assets/p12.png"
+            className="hidden md:block"
+            alt="portfolio_image"
+          />
+          <img
+            src="/assets/p10.png"
+            className="hidden md:block"
+            alt="portfolio_image"
+          />
+          <img
+            src="/assets/p3.png"
+            className="hidden md:block"
+            alt="portfolio_image"
+          />
           <img src="/assets/p11.png" alt="portfolio_image" />
           <img src="/assets/p2.png" alt="portfolio_image" />
         </div>
         <div className="mt-12 flex w-full cursor-pointer justify-center md:mt-20 lg:mt-25 xl:mt-30">
           <a
-            className="w-full sm:w-fit"
+            className="w-full flex justify-center sm:w-fit"
             href="https://www.instagram.com/tomomi_nagamori_art?igsh=bmtpYzRvZXQ1bXE1"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BorderCutBtn text={"詳細はこちら →"} />
+            <BorderCutBtnSm text={"詳細はこちら →"} />
           </a>
         </div>
       </div>

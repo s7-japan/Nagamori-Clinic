@@ -1,7 +1,6 @@
 "use client";
-import BorderCutBtn from "./Button/BorderCutBtn";
-
 import Link from "next/link";
+import BorderCutBtnSm from "./Button/BorderCutBtnSm";
 
 const Info = () => {
   return (
@@ -92,8 +91,8 @@ const Info = () => {
           世界で開催されるアートメイクイベントにスピーカーや審査員として招待される。
         </p>
         <div className="mt-11 flex w-full cursor-pointer justify-center md:mt-13 md:justify-start lg:mt-14 xl:mt-16">
-          <Link href="/schedule" className="w-full sm:w-fit">
-            <BorderCutBtn text={"予約確認はこちら →"} />
+          <Link href="/schedule" className="w-full flex justify-center sm:w-fit">
+            <BorderCutBtnSm text={"予約確認はこちら →"} />
           </Link>
         </div>
       </div>
